@@ -1,0 +1,31 @@
+{
+  "qa":[
+    {
+      "platformName": "Android",
+      "platformVersion": "8.0.0",
+      "deviceName": "8FS5T16603004905",
+      "appPackage": "com.chaion.makkii.qa",
+      "clearSystemFiles": false,
+      "appActivity": "com.chaion.makkii.MainActivity",
+      "noReset": true,
+      "automationName": "UiAutomator2"
+    },{
+      "platformName": "Android",
+      "platformVersion": "8.0.0",
+      "deviceName": "emulator-5554",
+      "appPackage": "com.chaion.makkii",
+      "clearSystemFiles": false,
+      "appActivity": "com.chaion.makkii.MainActivity",
+      "noReset": true,
+      "automationName": "UiAutomator2"
+    },{
+      "platformName": "iOS",
+      "platformVersion": "10.0.0",
+      "deviceName": "xxxxxx",
+      "appPackage": "com.chaion.makkii.qa",
+      "appActivity": "com.chaion.makkii.MainActivity",
+      "noReset": true,
+      "clearSystemFiles": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "Login_Btn":{
+    "mapped_name":"Login_Btn",
+    "android_class":"android.widget.TextView",
+    "en":"Login",
+    "cn":"登录"
+  },
+  "Warning_Popup":{
+    "mapped_name":"Clear_Acc_Warning",
+    "android_class":"android.widget.TextView",
+    "cn":"警告",
+    "en":"Warning"
+  },
+  "Cancel_Btn":{
+    "mapped_name":"Cancel_Btn",
+    "android_class":"android.widget.TextView",
+    "cn":"取消",
+    "en":"Cancel"
+  },
+  "Confirm_Btn":{
+    "mapped_name":"Confirm_Btn",
+    "android_class":"android.widget.TextView",
+    "cn":"确定",
+    "en":"OK"
+  }
+
+}

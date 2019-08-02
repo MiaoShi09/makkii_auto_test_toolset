@@ -1,0 +1,14 @@
+{
+  "name": "makkii_auto_test_toolset",
+  "version": "1.0.0",
+  "description": "makkii wallet test automation toolset",
+  "main": "firstTry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "^5.11.11"
+  }
+}
