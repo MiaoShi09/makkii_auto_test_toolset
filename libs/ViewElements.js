@@ -26,7 +26,7 @@ class ViewElements{
     this.os = os.toLowerCase() || "android";
 
 
-    this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage"];
+    this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage","permissionPopup","walletPage"];
     this.views={};
     this.app = browser;
   }
@@ -87,7 +87,7 @@ class ViewElements{
 * @param {object} map where to store all the elements
 * @param {string} lang the language of the application
 * @param {os} os the operating system the current application is running on
-* @param {Array<object>} data a list of NameMapping properites 
+* @param {Array<object>} data a list of NameMapping properites
 * @param {webdriver.browser} app that connected with the target application
 * @param {number} i index of the current data position
 */
@@ -98,6 +98,10 @@ async function iteratorPageElement(map,lang,os,data,app,i){
   }else{
     console.log(data[i].mapped_name);
     map[data[i].mapped_name] = await generateElement(lang,os,data[i],app);
+    for(let proName in data[i]){
+
+      map[data[i].mapped_name][proName] = data[i][proName];
+    }
     return iteratorPageElement(map,lang,os,data,app,i+1);
   }
 }
@@ -106,7 +110,7 @@ async function generateElement(lang, os, data, app){
   var selector="";
   if(os == "android"){
 
-    selector = data.android_xPath;
+    selector = data.android_id|| data.android_xPath;
   }
   //console.log(selector);
   return app.$(selector);

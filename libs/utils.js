@@ -30,8 +30,50 @@ function generateValidPassword(){
 * @return {string} invalid password string
 */
 function generateInvalidPassword(errorType){
-
+  switch(errorType){
+    case 0:
+      return generateShortPassword();
+    case 1:
+      return generateLongPassword();
+    default:
+      return generateInvalidCharacterPassword();
+  }
 }
+function generateShortPassword(){
+  let passwordLen = Math.floor(Math.random()*8);
+  let passwordBuff = new Buffer.allocUnsafe(passwordLen);
+  for(let i = 0; i < passwordLen;i++){
+      do {
+        var randChar = 33 + Math.floor(Math.random()*89);
+      }while(randChar!=33 && randChar != 35 && randChar != 63 && (randChar < 48 || (randChar > 57 && randChar < 65) || (randChar > 90 && randChar < 97)));
+    passwordBuff[i] = randChar;
+  }
+  return passwordBuff.toString("ascii");
+}
+function generateLongPassword(){
+  let passwordLen = Math.floor(Math.random()*17)+17;
+  let passwordBuff = new Buffer.allocUnsafe(passwordLen);
+  for(let i = 0; i < passwordLen;i++){
+      do {
+        var randChar = 33 + Math.floor(Math.random()*89);
+      }while(randChar!=33 && randChar != 35 && randChar != 63 && (randChar < 48 || (randChar > 57 && randChar < 65) || (randChar > 90 && randChar < 97)));
+    passwordBuff[i] = randChar;
+  }
+  return passwordBuff.toString("ascii");
+}
+
+function generateInvalidCharacterPassword(){
+  let passwordLen = Math.floor(Math.random()*8)+8;
+  let passwordBuff = new Buffer.allocUnsafe(passwordLen);
+  do{
+    for(let i = 0; i < passwordLen;i++){
+      passwordBuff[i] =Math.floor(Math.random()*128);
+    }
+  }while (!/^[a-zA-Z0-9!?#]/.test(passwordBuff.toString("ascii")));
+  return passwordBuff.toString("ascii");
+}
+
+
 
 
 /**

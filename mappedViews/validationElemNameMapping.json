@@ -29,6 +29,27 @@
     "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView[1]",
     "cn":"助记词",
     "en":"Mnemonic"
+  },
+  "Error_Popup":{
+    "mapped_name":"Invalid_Password_Error",
+    "android_class":"android.widget.TextView",
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]",
+    "cn":"错误",
+    "en":"Error"
+  },
+  "Password_Error_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Password_Error_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"密码必须是8-16位的数字， 字母和特殊字符组合。特殊字符仅限!?#",
+    "en":"Password must be 8-16 characters that contains numbers, letters and special characters \"!?#\"."
+  },
+  "Password_Mismatch_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Password_Error_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"密码必须是8-16位的数字， 字母和特殊字符组合。特殊字符仅限!?#",
+    "en":"Confirm password does not match password!"
   }
 
 }
