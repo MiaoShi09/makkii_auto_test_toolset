@@ -20,6 +20,7 @@ function generateValidPassword(){
   return passwordBuff.toString("ascii");
 }
 
+
 /**
 * function to generate a random invalid password based on requirements
 * @param {number} errorType presents error situdation;
@@ -32,5 +33,30 @@ function generateInvalidPassword(errorType){
 
 }
 
+
+/**
+* async function to parse mnemonic and check if seed phrase have some words
+* @param {Array<webdriver.element>} 12 web elements that contains seed phrase
+* @return {boolean} a resolve present that if seed phrase have the same words
+*/
+async function haveSameWords(seedPhraseNodes){
+  const MNE_LEN = 12;
+  if(seedPhraseNodes.length != MNE_LEN){
+    console.log("Invalid seed phrase node number: "+ seedPhraseNodes.length);
+    throw new Error("Invalid seed phrase node number: "+ seedPhraseNodes.length);
+  }
+  let wordSet = new Set();
+  let wordArray = new Array(MNE_LEN);
+  for(let i = 0 ; i < MNE_LEN; i++){
+    let word = await seedPhraseNodes[i].getText();
+    wordSet.add(word);
+    wordArray[i] = word;
+  }
+  console.log(wordArray);
+  return Promise.resolve(wordSet.size < 12);
+}
+
+
 exports.generateValidPassword = generateValidPassword;
 exports.generateInvalidPassword = generateInvalidPassword;
+exports.haveSameWords = haveSameWords;
