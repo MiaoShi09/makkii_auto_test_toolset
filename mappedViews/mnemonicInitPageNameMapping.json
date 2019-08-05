@@ -9,6 +9,7 @@
   {
     "mapped_name":"Mnemonic_Sec",
     "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]",
+
     "comment":"it should contain 12 ViewGroup sections, and each section contains a TextView that contains the seed phrase"
   },
   {
@@ -16,7 +17,7 @@
     "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView[1]",
     "android_class":"android.widget.TextView",
     "cn":"马上备份",
-    "en":""
+    "en":"Backup Now"
   },
   {
     "mapped_name":"Later_Btn",
