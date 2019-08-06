@@ -48,10 +48,10 @@ var registration = async (i)=>{
   console.log(_seedPhrase.length);
   console.log(_seedPhrase);
   if (await haveSameWords(_seedPhrase)){
-    await makkii.views.mnemonicInitPage.Later_Btn.click();
+    await makkii.views.mnemonicInitPage.Skip_Btn.click();
     console.log("Total Register Time: "+ i);
   }else{
-    await makkii.views.mnemonicInitPage.Later_Btn.click();
+    await makkii.views.mnemonicInitPage.Skip_Btn.click();
     await makkii.loadPage("mainMenu");
     await makkii.views.mainMenu.Settings_Btn.click();
     await makkii.loadPage("settingsPage");

@@ -50,6 +50,43 @@
     "android_class":"android.widget.TextView",
     "cn":"密码必须是8-16位的数字， 字母和特殊字符组合。特殊字符仅限!?#",
     "en":"Confirm password does not match password!"
+  },
+  "Invalid_Old_Password_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Invalid_Old_Password_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"旧密码不正确",
+    "en":"Old password is incorrect"
+  },
+  "Invalid_New_Password_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Invalid_New_Password_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"新密码格式不正确",
+    "en":"New password is invalid"
+  },
+  "Login_Incorrect_Password_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Login_Incorrect_Password_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"密码不正确",
+    "en":"Incorrect password"
+  },
+  "Password_Change_Mismatch_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Invalid_Old_Password_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"确认密码不一致",
+    "en":"Confirmed password and new password are different"
+  },
+  "Same_Password_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Same_Password_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"新密码不能和旧密码相同",
+    "en":"New password must be different from old password"
+
   }
+
 
 }

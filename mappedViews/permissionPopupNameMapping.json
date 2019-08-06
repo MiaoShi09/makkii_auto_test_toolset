@@ -1,12 +1,12 @@
 [
   {
     "mapped_name":"Permission_Sec",
-    "android_id":"com.android.packageinstaller:id/dialog_container"
+    "android_xPath":"//*[@resource-id=\"com.android.packageinstaller:id/dialog_container\"]"
   },{
     "mapped_name":"Allow_Btn",
-    "android_id":"com.android.packageinstaller:id/permission_allow_button"
+    "android_xPath":"//*[@resource-id=\"com.android.packageinstaller:id/permission_allow_button\"]"
   },{
     "mapped_name":"Deny_Btn",
-    "android_id":"com.android.packageinstaller:id/permission_deny_button"
+    "android_xPath":"//*[@resource-id=\"com.android.packageinstaller:id/permission_deny_button\"]"
   }
 ]

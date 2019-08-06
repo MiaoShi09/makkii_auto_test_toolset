@@ -13,7 +13,7 @@
       "platformName": "Android",
       "platformVersion": "8.0.0",
       "deviceName": "emulator-5554",
-      "appPackage": "com.chaion.makkii",
+      "appPackage": "com.chaion.makkii.qa",
       "clearSystemFiles": false,
       "appActivity": "com.chaion.makkii.MainActivity",
       "noReset": true,

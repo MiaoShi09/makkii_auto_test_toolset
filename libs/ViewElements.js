@@ -26,7 +26,9 @@ class ViewElements{
     this.os = os.toLowerCase() || "android";
 
 
-    this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage","permissionPopup","walletPage"];
+    this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage",
+                          "permissionPopup","walletPage","changePasswordPage","recoveryPage",
+                        "recoveryPasswordPage"];
     this.views={};
     this.app = browser;
   }
@@ -39,18 +41,14 @@ class ViewElements{
     if(this.mapped_views.includes(pageName)){
       let pageElemData = require("../mappedViews/"+pageName+"NameMapping.json");
       var self = this;
-      //console.log(self);
-      //console.log(self.views);
       self.views[pageName]={};
 
-      await iteratorPageElement(self.views[pageName],self.lang,self.os,pageElemData,self.app,0);
-
-
+      self.views[pageName].isFullyLoaded = await iteratorPageElement(self.views[pageName],self.lang,self.os,pageElemData,self.app,0,true);
 
       return Promise.resolve(this.views[pageName]);
     }else{
       throw new Error("Please name mapping view "+pageName+" or make sure the pageName is correct. Currently only name mapping these pages:\n"
-              + JSON.stringify(self.mapped_views));
+              + JSON.stringify(this.mapped_views));
     }
   }
 
@@ -73,7 +71,11 @@ class ViewElements{
   */
   async getOrphanElem(mapped_elem_name){
     var self  = this;
-    return checkElement(self.lang,self.os, validationElem[mapped_elem_name], self.app);
+    let _orphanElem = await checkElement(self.lang,self.os, validationElem[mapped_elem_name], self.app);
+    for(let proName in validationElem[mapped_elem_name]){
+      _orphanElem[proName] = validationElem[mapped_elem_name][proName];
+    }
+    return _orphanElem;
   }
 
 
@@ -92,17 +94,19 @@ class ViewElements{
 * @param {number} i index of the current data position
 */
 
-async function iteratorPageElement(map,lang,os,data,app,i){
+async function iteratorPageElement(map,lang,os,data,app,i,isFound){
   if(i == data.length){
-    return Promise.resolve();
+    return Promise.resolve(isFound);
   }else{
     console.log(data[i].mapped_name);
     map[data[i].mapped_name] = await generateElement(lang,os,data[i],app);
     for(let proName in data[i]){
 
       map[data[i].mapped_name][proName] = data[i][proName];
+      isFound = isFound && proName != "error";
     }
-    return iteratorPageElement(map,lang,os,data,app,i+1);
+
+    return iteratorPageElement(map,lang,os,data,app,i+1,isFound);
   }
 }
 
@@ -110,7 +114,7 @@ async function generateElement(lang, os, data, app){
   var selector="";
   if(os == "android"){
 
-    selector = data.android_id|| data.android_xPath;
+    selector = data.android_xPath;
   }
   //console.log(selector);
   return app.$(selector);
