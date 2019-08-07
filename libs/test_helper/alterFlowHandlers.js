@@ -5,14 +5,14 @@ exports.permissionHandler = function(app,approved,logger){
       return app.loadPage("permissionPopup");
   }).then((permissionPopup)=>{
     if(!permissionPopup.isFullyLoaded) throw "No Permission Popup";
-    
+
     logger.debug("permisson popup section shows up");
     return approved? permissionPopup.Allow_Btn.click()
               : permissionPopup.Deny_Btn.click();
   }).catch((e)=>{
     logger.info(e);
 
-  })
+  });
 };
 
 exports.eraseDataHandler = function(app,approved,logger){
@@ -27,6 +27,6 @@ exports.eraseDataHandler = function(app,approved,logger){
   },()=>{
     logger.info("No warning for erasing previous data; no previous data");
     return Promise.resolve();
-  })
+  });
 
 };

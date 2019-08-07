@@ -28,7 +28,8 @@ class ViewElements{
 
     this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage",
                           "permissionPopup","walletPage","changePasswordPage","recoveryPage",
-                        "recoveryPasswordPage"];
+                        "recoveryPasswordPage","selectCoinPage","addFromPage","accountNamePage",
+                      "privateKeyPage"];
     this.views={};
     this.app = browser;
   }
@@ -78,8 +79,13 @@ class ViewElements{
     return _orphanElem;
   }
 
-
-  async validateNameMapping(pageName){
+  // currently only support for "text" attribute
+  async findElementByText(content){
+    let self = this;
+    let elem = await self.app.$('//*[@text="'+content+'"]');
+    console.log(elem);
+    if(elem.hasOwnProperty("error")) return Promise.reject(elem.error);
+    else return Promise.resolve(elem);
 
   }
 }

@@ -36,6 +36,14 @@ class Logger{
     }
     fs.appendFileSync(this.path,"[ERROR]\t"+JSON.stringify(error)+"\n");
   }
+
+  divider(msg){
+    if(this.enableConsoleLog){
+      console.log("\x1b[44m%s\x1b[0m","[DIVIDER]--------------------------------------------------------------");
+      console.log(msg);
+    }
+    fs.appendFileSync(this.path,"---------------------"+msg+"-------------------------------");
+  }
 }
 
 

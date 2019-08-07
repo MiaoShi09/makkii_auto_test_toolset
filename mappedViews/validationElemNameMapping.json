@@ -85,8 +85,13 @@
     "android_class":"android.widget.TextView",
     "cn":"新密码不能和旧密码相同",
     "en":"New password must be different from old password"
-
+  },
+  "Logout_Warning_Msg":{
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]",
+    "mapped_name":"Logout_Warning_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"退出后不会删除任何历史数据，下次登录依然可以使用本账号。",
+    "en":"Logging out will not delete data. You can still log in with this account."
   }
-
 
 }
