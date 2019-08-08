@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "mocha": "^6.2.0",
+    "wd": "^1.11.3",
     "webdriverio": "^5.11.11"
   },
   "devDependencies": {

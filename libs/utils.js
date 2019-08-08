@@ -99,6 +99,55 @@ async function haveSameWords(seedPhraseNodes){
 }
 
 
+
+async function vScrollListView(client,element,vertial_offset){
+  let size = await element.getSize();
+  let loc = await element.getLocation();
+  console.log(size);
+  console.log(loc);
+  await client.touchAction([
+        { action: 'press',  x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height+vertial_offset*2)/2) },
+        { action: 'moveTo', x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height+vertial_offset)/2) },
+        { action: 'moveTo', x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height-vertial_offset)/2) },
+        { action: 'moveTo', x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height-vertial_offset*2)/2) },
+    ])
+
+}
+
+//target: [attribute name, attribute value]
+async function scrollElementIntoView(client, parentElem, target, offset){
+  if(!await parentElem.getAttribute("scrollable"))
+    return Promise.reject("passed element is not scrollable");
+
+  let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]";
+  let _time = 0;
+  let _tempElem = await parentElem.$(_target);
+  console.log("--------------------------------");
+  while(_time < 3 && _tempElem.hasOwnProperty("error")){
+    console.log(_time);
+    console.log(_tempElem)
+    _time++;
+    await vScrollListView(client, parentElem, 0-offset*2);
+    _tempElem = await parentElem.$(_target);
+  }
+
+  while(_time < 10 && _tempElem.hasOwnProperty("error")){
+    console.log(_time);
+    console.log(_tempElem)
+    _time++;
+    await vScrollListView(client, parentElem, offset);
+    _tempElem = await parentElem.$(_target);
+  }
+
+  console.log(_tempElem);
+
+  return parentElem.$(_target);
+}
+
+
+
 exports.generateValidPassword = generateValidPassword;
 exports.generateInvalidPassword = generateInvalidPassword;
 exports.haveSameWords = haveSameWords;
+exports.vScrollListView = vScrollListView;
+exports.scrollElementIntoView = scrollElementIntoView;
