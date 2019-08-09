@@ -15,6 +15,7 @@ function loginFlow(app,password,logger){
     return app.views.logInPage.Login_Btn.click();
   }).catch((e)=>{
     logger.debug(e);
+    return Promise.reject(e);
   });
 };
 

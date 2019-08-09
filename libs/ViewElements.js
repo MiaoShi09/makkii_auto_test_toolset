@@ -29,7 +29,7 @@ class ViewElements{
     this.mapped_views = ["logInPage","registerPage","mnemonicInitPage","mainMenu","settingsPage",
                           "permissionPopup","walletPage","changePasswordPage","recoveryPage",
                         "recoveryPasswordPage","selectCoinPage","addFromPage","accountNamePage",
-                      "privateKeyPage"];
+                        "privateKeyPage","addressBookPage","newContactPage"];
     this.views={};
     this.app = browser;
   }

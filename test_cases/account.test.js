@@ -194,8 +194,3 @@ async function importPKAcc(app,coinType){
   await app.loadPage("accountNamePage");
   await app.views.accountNamePage.Save_Btn.click();
 }
-
-
-async function validateAccount(app, accountName, address){
-
-}

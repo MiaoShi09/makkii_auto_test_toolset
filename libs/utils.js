@@ -145,9 +145,21 @@ async function scrollElementIntoView(client, parentElem, target, offset){
 }
 
 
+function getAbbr(coinType){
+  let _coin_abbr = {
+    aion:"AION",
+    bitcoin:"BTC",
+    ethereum:"ETH",
+    litecoin:"LTC",
+    tron:"TRX"
+  };
+  return coinType.toUpperCase()+"/"+_coin_abbr[coinType.toLowerCase()];
+}
+
 
 exports.generateValidPassword = generateValidPassword;
 exports.generateInvalidPassword = generateInvalidPassword;
 exports.haveSameWords = haveSameWords;
 exports.vScrollListView = vScrollListView;
 exports.scrollElementIntoView = scrollElementIntoView;
+exports.getAbbr = getAbbr;
