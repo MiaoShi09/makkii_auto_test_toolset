@@ -76,20 +76,21 @@ describe("import accouts into address book",()=>{
     for(let coinType in test_accs){
       it("AAddr#1-"+coinType,async()=>{
         await makkii.views.addressBookPage.Add_Btn.click();
+        await client.pause(PAUSE_TIMEOUT);
         await makkii.loadPage("newContactPage");
         await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
-        await client.pause(PAUSE_TIMEOUT);
+        await client.pause(PAUSE_TIMEOUT*2);
         await makkii.loadPage("selectCoinPage");
         await makkii.views.selectCoinPage[coinType+"_Btn"].click();
         await makkii.loadPage("newContactPage");
         assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coinType));
         await makkii.views.newContactPage.Contact_Name_TextField.setValue(coinType+"_pk");
-        await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coinType][1].address);
+        await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coinType][0].address);
         await makkii.views.newContactPage.Save_Btn.click();
         // go back to address book section to check if new address exists
 
         await makkii.loadPage("addressBookPage");
-        await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"])
+        await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
         .then((elem)=>{
           assert.equal(elem.hasOwnProperty("error"),false);
         },()=>{
@@ -99,5 +100,93 @@ describe("import accouts into address book",()=>{
     }
 
   });
+
+
+  describe("AAddr#2: add valid address checksum into address book",()=>{
+    for(let coinType in test_accs){
+
+      if(test_accs[coinType][1].checksum !== undefined){
+        it("AAddr#2-"+coinType,async()=>{
+          await makkii.views.addressBookPage.Add_Btn.click();
+          await client.pause(PAUSE_TIMEOUT);
+          await makkii.loadPage("newContactPage");
+          await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
+          await client.pause(PAUSE_TIMEOUT*2);
+          await makkii.loadPage("selectCoinPage");
+          await makkii.views.selectCoinPage[coinType+"_Btn"].click();
+          await makkii.loadPage("newContactPage");
+          assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coinType));
+          await makkii.views.newContactPage.Contact_Name_TextField.setValue(coinType+"2_checksum");
+          await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coinType][1].checksum);
+          await makkii.views.newContactPage.Save_Btn.click();
+          // go back to address book section to check if new address exists
+
+          await makkii.loadPage("addressBookPage");
+          await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"2_checksum"],150)
+          .then((elem)=>{
+            assert.equal(elem.hasOwnProperty("error"),false);
+          },()=>{
+            return assert.doesNotReject(makkii.findElementByText(coinType+"2_checksum"));
+          });
+        });
+      }
+    }
+  });
+
+
+  describe("AAddr#3: add some address",()=>{
+    // add same address for each coin coinType
+
+    // add address checksum for aion/ethereum
+  })
+
+
+
+
+
+
+
+  describe("AAddr#4: remove address",()=>{
+    for(let coinType in test_accs){
+      it("AAddr#4-"+coinType,async()=>{
+
+
+        await makkii.loadPage("addressBookPage");
+        await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
+        // .then((elem)=>{
+        //   logger.debug(elem);
+        //   return elem.$('/..')
+        // })
+        .then((parent)=>{
+          logger.debug(parent);
+          return utils.hScrollPanel(client,parent,-1);
+        });
+        let Delete_Btn = await makkii.getOrphanElem("Delete_Btn");
+        await Delete_Btn.click();
+        await makkii.isLoaded("Warning_Popup").then(()=>{
+          return makkii.getOrphanElem("Delete_Addr_Msg");
+        }).then((Delete_Addr_Msg)=>{
+          return Delete_Addr_Msg.isExisting();
+        }).then((isExist)=>{
+          assert.equal(isExist,true);
+          return makkii.getOrphanElem("Delete_Btn")
+        }).then((Confirm_Btn)=>{
+          return Confirm_Btn.click();
+        }).catch((e)=>{
+          logger.error(e);
+          throw e;
+        });
+
+        await makkii.loadPage("addressBookPage");
+        await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
+        .then((elem)=>{
+          assert.equal(elem.hasOwnProperty("error"),true);
+        },()=>{
+          return assert.rejects(makkii.findElementByText(coinType+"_pk"));
+        });
+
+      });
+    }
+  })
 
 });

@@ -99,6 +99,18 @@
     "android_class":"android.widget.TextView",
     "cn":"没有设置密码，请先注册",
     "en":"No password set, Register first"
+  },
+  "Delete_Addr_Msg":{
+    "mapped_name":"Delete_Addr_Msg",
+    "android_class":"android.widget.TextView",
+    "cn":"",
+    "en":"Are you sure you want to delete this address?"
+  },
+  "Delete_Btn":{
+    "android_class":"android.widget.TextView",
+    "mapped_name":"Delete_Btn",
+    "cn":"删除",
+    "en":"Delete"
   }
 
 }

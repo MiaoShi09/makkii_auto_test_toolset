@@ -114,12 +114,30 @@ async function vScrollListView(client,element,vertial_offset){
 
 }
 
+// direction == -1 means swipe left; 1 means swipe right
+async function hScrollPanel(client, element, direction){
+  let size = await element.getSize();
+  let loc = await element.getLocation();
+  console.log(size);
+  console.log(loc);
+  await client.touchAction([
+        { action: 'press',  x: loc.x+Math.floor(size.width*(0.5+0.1*direction)), y: loc.y+Math.floor(size.height/2) },
+        { action: 'moveTo', x: loc.x+Math.floor(size.width*(0.5+0.2*direction)), y: loc.y+Math.floor(size.height/2) },
+        { action: 'moveTo', x: loc.x+Math.floor(size.width*(0.5+0.3*direction)), y: loc.y+Math.floor(size.height/2) },
+        { action: 'moveTo', x: loc.x+Math.floor(size.width*(0.5+0.4*direction)), y: loc.y+Math.floor(size.height/2) },
+    ]);
+}
+
+
+
+
 //target: [attribute name, attribute value]
 async function scrollElementIntoView(client, parentElem, target, offset){
   if(!await parentElem.getAttribute("scrollable"))
     return Promise.reject("passed element is not scrollable");
 
-  let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]";
+  // looking for target's parent for now; may add additional arguments pass in function
+  let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]/..";
   let _time = 0;
   let _tempElem = await parentElem.$(_target);
   console.log("--------------------------------");
@@ -127,7 +145,7 @@ async function scrollElementIntoView(client, parentElem, target, offset){
     console.log(_time);
     console.log(_tempElem)
     _time++;
-    await vScrollListView(client, parentElem, 0-offset*2);
+    await vScrollListView(client, parentElem, 0-offset*1.5);
     _tempElem = await parentElem.$(_target);
   }
 
@@ -161,5 +179,6 @@ exports.generateValidPassword = generateValidPassword;
 exports.generateInvalidPassword = generateInvalidPassword;
 exports.haveSameWords = haveSameWords;
 exports.vScrollListView = vScrollListView;
+exports.hScrollPanel = hScrollPanel;
 exports.scrollElementIntoView = scrollElementIntoView;
 exports.getAbbr = getAbbr;

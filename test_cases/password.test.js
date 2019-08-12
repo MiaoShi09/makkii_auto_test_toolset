@@ -78,9 +78,6 @@ describe("password format test suite",()=>{
       await makkii.views.registerPage.Confirm_Password_TextField.setValue(_longPassword);
       await makkii.views.registerPage.Register_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
 
 
       await makkii.isLoaded("Error_Popup").then(()=>{
@@ -109,9 +106,6 @@ describe("password format test suite",()=>{
       await makkii.views.registerPage.Confirm_Password_TextField.setValue(_shortPassword);
       await makkii.views.registerPage.Register_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
 
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Error_Msg");
@@ -142,9 +136,6 @@ describe("password format test suite",()=>{
       await makkii.views.registerPage.Confirm_Password_TextField.setValue(_password2);
       await makkii.views.registerPage.Register_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
 
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Mismatch_Msg");
@@ -229,10 +220,6 @@ describe("password format test suite",()=>{
       await makkii.views.recoveryPasswordPage.Confirm_Password_TextField.setValue(_password1);
       await makkii.views.recoveryPasswordPage.Reset_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
-
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Error_Msg");
       }).then((Password_Error_Msg)=>{
@@ -258,10 +245,6 @@ describe("password format test suite",()=>{
       await makkii.views.recoveryPasswordPage.Confirm_Password_TextField.setValue(_password1);
       await makkii.views.recoveryPasswordPage.Reset_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
-
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Error_Msg");
       }).then((Password_Error_Msg)=>{
@@ -280,7 +263,7 @@ describe("password format test suite",()=>{
 
 
     // currently skip APC#3 wait for MAK-84 fixed
-    xit("APC#3:recovery passwords do not match",async ()=>{
+    it("APC#3:recovery passwords do not match",async ()=>{
 
       logger.divider("APC#3:recovery passwords do not match");
       let _password1 = utils.generateValidPassword();
@@ -293,9 +276,7 @@ describe("password format test suite",()=>{
       await makkii.views.recoveryPasswordPage.Confirm_Password_TextField.setValue(_password2);
       await makkii.views.recoveryPasswordPage.Reset_Btn.click();
 
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
+
 
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Mismatch_Msg");
@@ -321,10 +302,6 @@ describe("password format test suite",()=>{
       await makkii.views.recoveryPasswordPage.Password_TextField.setValue(_password1);
       await makkii.views.recoveryPasswordPage.Confirm_Password_TextField.setValue(_password1);
       await makkii.views.recoveryPasswordPage.Reset_Btn.click();
-
-      //----------need to be removed after MAK-83 fixed----------
-      await eraseDataHandler(makkii,true,logger);
-      //----------------------------------------------------------
 
       await makkii.isLoaded("Error_Popup").then(()=>{
         return makkii.getOrphanElem("Password_Error_Msg");
@@ -557,6 +534,8 @@ describe("password format test suite",()=>{
       await makkii.views.changePasswordPage.Confirm_Password_TextField.setValue(_newPassword);
       await makkii.views.changePasswordPage.Save_Btn.click();
 
+      await client.pause(PAUSE_TIMEOUT);
+      await logoutFlow(makkii,logger);
       // use new password to login makkii to make sure the new password has been updated
       await loginFlow(makkii, _newPassword, logger);
       assert.equal((await makkii.loadPage("mainMenu")).isFullyLoaded,true);
