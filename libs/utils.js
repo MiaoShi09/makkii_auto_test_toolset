@@ -39,6 +39,7 @@ function generateInvalidPassword(errorType){
       return generateInvalidCharacterPassword();
   }
 }
+
 function generateShortPassword(){
   let passwordLen = Math.floor(Math.random()*8);
   let passwordBuff = new Buffer.allocUnsafe(passwordLen);
@@ -50,6 +51,7 @@ function generateShortPassword(){
   }
   return passwordBuff.toString("ascii");
 }
+
 function generateLongPassword(){
   let passwordLen = Math.floor(Math.random()*17)+17;
   let passwordBuff = new Buffer.allocUnsafe(passwordLen);
@@ -98,13 +100,15 @@ async function haveSameWords(seedPhraseNodes){
   return Promise.resolve(wordSet.size < 12);
 }
 
-
-
+/**
+* async function to perform up/down swipe action for the given element
+* @param {driver.browser} client the webdriver browser element
+* @param {webElement} element the target element
+* @param {number} vertial_offset whether users need to swipe up (negative number) or down (positive)
+*/
 async function vScrollListView(client,element,vertial_offset){
   let size = await element.getSize();
   let loc = await element.getLocation();
-  console.log(size);
-  console.log(loc);
   await client.touchAction([
         { action: 'press',  x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height+vertial_offset*2)/2) },
         { action: 'moveTo', x: Math.floor(size.width*0.6), y: loc.y+Math.floor((size.height+vertial_offset)/2) },
@@ -114,12 +118,15 @@ async function vScrollListView(client,element,vertial_offset){
 
 }
 
-// direction == -1 means swipe left; 1 means swipe right
+/**
+* async function to perform left/right swipe action for the given element
+* @param {driver.browser} client the webdriver browser element
+* @param {webElement} element the target element
+* @param {number} direction whether users need to swipe left (-1) or right (1)
+*/
 async function hScrollPanel(client, element, direction){
   let size = await element.getSize();
   let loc = await element.getLocation();
-  console.log(size);
-  console.log(loc);
   await client.touchAction([
         { action: 'press',  x: loc.x+Math.floor(size.width*(0.5+0.1*direction)), y: loc.y+Math.floor(size.height/2) },
         { action: 'moveTo', x: loc.x+Math.floor(size.width*(0.5+0.2*direction)), y: loc.y+Math.floor(size.height/2) },
@@ -130,7 +137,13 @@ async function hScrollPanel(client, element, direction){
 
 
 
-
+/**
+* async function to perform scroll up and down to make the target element in value
+* @param {driver.browser} client the webdriver browser element
+* @param {webElement} parentElem the parent of the target element
+* @param {array<string>} target a pair of attribute name and its value
+* @param {number} offset swiping offset/speed
+*/
 //target: [attribute name, attribute value]
 async function scrollElementIntoView(client, parentElem, target, offset){
   if(!await parentElem.getAttribute("scrollable"))
@@ -163,7 +176,7 @@ async function scrollElementIntoView(client, parentElem, target, offset){
 }
 
 
-function getAbbr(coinType){
+function getAbbr(coinType,mini){
   let _coin_abbr = {
     aion:"AION",
     bitcoin:"BTC",
@@ -171,7 +184,12 @@ function getAbbr(coinType){
     litecoin:"LTC",
     tron:"TRX"
   };
-  return coinType.toUpperCase()+"/"+_coin_abbr[coinType.toLowerCase()];
+  if(!mini){
+    return coinType.toUpperCase()+"/"+_coin_abbr[coinType.toLowerCase()];
+  }else{
+    return _coin_abbr[coinType.toLowerCase()];
+  }
+
 }
 
 

@@ -103,7 +103,7 @@
   "Delete_Addr_Msg":{
     "mapped_name":"Delete_Addr_Msg",
     "android_class":"android.widget.TextView",
-    "cn":"",
+    "cn":"确定要删除这个地址项？",
     "en":"Are you sure you want to delete this address?"
   },
   "Delete_Btn":{
@@ -111,6 +111,11 @@
     "mapped_name":"Delete_Btn",
     "cn":"删除",
     "en":"Delete"
+  },
+  "Existing_Address_Msg":{
+    "android_class":"android.widget.TextView",
+    "en":"This address already exists in address book.",
+    "cn":"地址簿中已存在该地址"
   }
 
 }

@@ -29,5 +29,8 @@
     "android_class":"android.widget.TextView",
     "cn":"保存",
     "en":"Save"
+  },{
+    "mapped_name":"Back_Btn",
+    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup"
   }
 ]

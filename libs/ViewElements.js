@@ -109,9 +109,9 @@ async function iteratorPageElement(map,lang,os,data,app,i,isFound){
     for(let proName in data[i]){
 
       map[data[i].mapped_name][proName] = data[i][proName];
-      isFound = isFound && proName != "error";
-    }
 
+    }
+    isFound = (isFound && !map[data[i].mapped_name].hasOwnProperty("error"));
     return iteratorPageElement(map,lang,os,data,app,i+1,isFound);
   }
 }
