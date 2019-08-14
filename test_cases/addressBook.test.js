@@ -180,6 +180,36 @@ describe("import accouts into address book",()=>{
       });
     }
 
+    for(let coinType in test_accs){
+      if(coinType == "Aion" || coinType == "Ethereum"){
+        it("AAddr#3-"+coinType + " checksum duplication",async()=>{
+
+          await client.pause(PAUSE_TIMEOUT);
+          await makkii.loadPage("newContactPage");
+          await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
+          await client.pause(PAUSE_TIMEOUT*2);
+          await makkii.loadPage("selectCoinPage");
+          await makkii.views.selectCoinPage[coinType+"_Btn"].click();
+          await makkii.loadPage("newContactPage");
+          assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coinType));
+          await makkii.views.newContactPage.Contact_Name_TextField.setValue(coinType+"_cs_dup");
+          await client.isKeyboardShown().then((isShown)=>{
+            return isShown? client.hideKeyboard(): Promise.resolve();
+          }).then(()=>{
+            return client.pause(PAUSE_TIMEOUT);
+          })
+          await makkii.loadPage("newContactPage");
+          await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coinType][0].checksum);
+          await makkii.views.newContactPage.Save_Btn.click();
+          // go back to address book section to check if new address exists
+          await client.pause(PAUSE_TIMEOUT/2);
+          let ErrorMsg = await makkii.getOrphanElem("Existing_Address_Msg");
+          assert.equal(ErrorMsg.hasOwnProperty("error"),false);
+
+        });
+      }
+    }
+
   })
 
   describe("AAddr#4: remove address",()=>{
@@ -242,48 +272,40 @@ describe("import accouts into address book",()=>{
     }
   });
 
-  describe("AAddr#6: ETH/AION prefix",()=>{
+  describe("AAddr#6: ETH/AION no prefix is invalid format",()=>{
 
     var testdata = {};
     testdata.Aion={};
     testdata.Ethereum={};
     for(let coin in testdata){
-      testdata[coin].address = test_accs[coin][0].address;
-      testdata[coin].checksum = test_accs[coin][0].checksum;
       testdata[coin].noprefix = test_accs[coin][0].address.substring(2,66);
       testdata[coin].checksumNoPrefix = test_accs[coin][0].checksum.substring(2,66);
     }
-    before (async ()=>{
+    beforeEach (async ()=>{
 
+      logger.divider("AAddr#6: make sure makkii land on new Contact section")
+      await makkii.loadPage("newContactPage").then((newContactPage)=>{
 
-    await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-
-       return makkii.views.addressBookPage.Caption.getText();
-     }).then((caption)=>{
-       logger.debug("expected to get caption of addressBookPage - "+caption);
-       logger.debug(makkii.views.addressBookPage.Caption);
-
-       if(caption == makkii.views.addressBookPage.Caption[language]){
-         return Promise.resolve();
-       }else{
-         return makkii.loadPage("newContactPage").then((newContactPage)=>{
-           if(newContactPage.isFullyLoaded) return newContactPage.Back_Btn.click();
-           logger.debug("unexpected location");
-           throw new Error("unexpected location");
-         });
-       }
-     });
-      logger.divider("AAddr#6: ETH/AION prefix; Prepared test data")
+       return makkii.views.newContactPage.Caption.getText();
+       }).then((caption)=>{
+         if(caption == makkii.views.newContactPage.Caption[language]){
+           return Promise.resolve();
+         }else{
+           return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+             if(addressBookPage.isFullyLoaded) return addressBookPage.Add_Btn.click();
+             logger.debug("unexpected location");
+             throw new Error("unexpected location");
+           });
+         }
+       });
+    logger.divider("AAddr#6: precondition completed")
 
     });
 
     for(let coin in testdata){
-      for(let addr in testdata[coin]){
-        it("AAddr#6:"+coin+"-"+addr,async()=>{
-          // add [addr] should succussful
-          await client.pause(PAUSE_TIMEOUT);
-          await makkii.loadPage("addressBookPage");
-          await makkii.views.addressBookPage.Add_Btn.click();
+      for(let field in testdata[coin]){
+        it("AAddr#6-"+coin+" fill with "+ field, async()=>{
+
           await client.pause(PAUSE_TIMEOUT);
           await makkii.loadPage("newContactPage");
           await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
@@ -292,75 +314,31 @@ describe("import accouts into address book",()=>{
           await makkii.views.selectCoinPage[coin+"_Btn"].click();
           await makkii.loadPage("newContactPage");
           assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coin));
-          await makkii.views.newContactPage.Contact_Name_TextField.setValue(coin + "_" + addr);
-          await makkii.views.newContactPage.Address_TextField.setValue(testdata[coin][addr]);
+          await makkii.views.newContactPage.Contact_Name_TextField.setValue(coin+field);
+
+          await client.isKeyboardShown().then((isShown)=>{
+            return isShown? client.hideKeyboard(): Promise.resolve();
+          }).then(()=>{
+            return client.pause(PAUSE_TIMEOUT);
+          });
+
+          await makkii.loadPage("newContactPage");
+          await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coin][field]);
+          logger.debug("click back button");
           await makkii.views.newContactPage.Save_Btn.click();
-
-          // go back to address book section to check if new address exists
-          await makkii.loadPage("addressBookPage");
-          await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text",coin + "_" + addr],150)
-          .then((elem)=>{
-            assert.equal(elem.hasOwnProperty("error"),false);
-          },()=>{
-            return assert.doesNotReject(makkii.findElementByText(coin + "_" + addr));
-          });
-
-          await makkii.views.addressBookPage.Add_Btn.click();
-          // add [dAddr] should failed
-          for(let dAddr in testdata[coin]){
-            if(dAddr != addr){
-              await makkii.loadPage("newContactPage");
-              await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
-              await client.pause(PAUSE_TIMEOUT*2);
-              await makkii.loadPage("selectCoinPage");
-              await makkii.views.selectCoinPage[coin+"_Btn"].click();
-              await makkii.loadPage("newContactPage");
-              assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coin));
-              await makkii.views.newContactPage.Contact_Name_TextField.setValue(coin + "_" + dAddr);
-              await makkii.views.newContactPage.Address_TextField.setValue(testdata[coin][dAddr]);
-              await makkii.views.newContactPage.Save_Btn.click();
-              // check if error message shows up
-              await client.pause(PAUSE_TIMEOUT/2);
-              let ErrorMsg = await makkii.getOrphanElem("Existing_Address_Msg");
-              assert.equal(ErrorMsg.hasOwnProperty("error"),false);
-            }
-          }
-
-          // delete [addr]
-          await makkii.views.newContactPage.Back_Btn.click();
-          await client.pause(PAUSE_TIMEOUT);
-          await makkii.loadPage("addressBookPage");
-          await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coin + "_" + addr],150)
-          .then((parent)=>{
-            logger.debug(parent);
-            return utils.hScrollPanel(client,parent,-1);
-          });
-          let Delete_Btn = await makkii.getOrphanElem("Delete_Btn");
-          await Delete_Btn.click();
-          await makkii.isLoaded("Warning_Popup").then(()=>{
-            return makkii.getOrphanElem("Delete_Addr_Msg");
-          }).then((Delete_Addr_Msg)=>{
-            return Delete_Addr_Msg.isExisting();
-          }).then((isExist)=>{
-            assert.equal(isExist,true);
-            return makkii.getOrphanElem("Delete_Btn")
-          }).then((Confirm_Btn)=>{
-            return Confirm_Btn.click();
-          }).catch((e)=>{
-            logger.error(e);
+          await client.pause(PAUSE_TIMEOUT/2).then(()=>{
+            // go back to address book section to check if new address exists
+            logger.debug("check error msg");
+            logger.debug(invalidFormatMsg(coin)[language]);
+            return makkii.findElementByText(invalidFormatMsg(coin)[language]);
+          }).then((Error_Msg)=>{
+            assert.equal(Error_Msg.hasOwnProperty("error"),false);
+          },(e)=>{
+            logger.debug(e);
             throw e;
           });
 
-          await makkii.loadPage("addressBookPage");
-          await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coin + "_" + addr],150)
-          .then((elem)=>{
-            assert.equal(elem.hasOwnProperty("error"),true);
-          },()=>{
-            return assert.rejects(makkii.findElementByText(coin + "_" + addr));
-          });
         });
-
-
       }
     }
 
@@ -373,17 +351,17 @@ describe("import accouts into address book",()=>{
       await makkii.loadPage("newContactPage").then((newContactPage)=>{
 
        return makkii.views.newContactPage.Caption.getText();
-     }).then((caption)=>{
-       if(caption == makkii.views.newContactPage.Caption[language]){
-         return Promise.resolve();
-       }else{
-         return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-           if(addressBookPage.isFullyLoaded) return addressBookPage.Add_Btn.click();
-           logger.debug("unexpected location");
-           throw new Error("unexpected location");
-         });
-       }
-     });
+       }).then((caption)=>{
+         if(caption == makkii.views.newContactPage.Caption[language]){
+           return Promise.resolve();
+         }else{
+           return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+             if(addressBookPage.isFullyLoaded) return addressBookPage.Add_Btn.click();
+             logger.debug("unexpected location");
+             throw new Error("unexpected location");
+           });
+         }
+       });
         logger.divider("AAddr#5-pre: passed");
     });
 

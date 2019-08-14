@@ -147,34 +147,34 @@ async function hScrollPanel(client, element, direction){
 //target: [attribute name, attribute value]
 async function scrollElementIntoView(client, parentElem, target, offset){
   let _scrollable = await parentElem.getAttribute("scrollable");
-  console.log(_scrollable);
-  if(!_scrollable)
+  console.log("_isScrollable: "+_scrollable);
+  console.log("typeof _isScrollable" + (typeof _scrollable));
+  if(!JSON.parse(_scrollable)){
     return Promise.reject("passed element is not scrollable");
+  }else{
+    // looking for target's parent for now; may add additional arguments pass in function
+    let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]/..";
+    let _time = 0;
+    let _tempElem = await parentElem.$(_target);
 
-  // looking for target's parent for now; may add additional arguments pass in function
-  let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]/..";
-  let _time = 0;
-  let _tempElem = await parentElem.$(_target);
-  console.log("--------------------------------");
-  while(_time < 3 && _tempElem.hasOwnProperty("error")){
-    console.log(_time);
-    console.log(_tempElem)
-    _time++;
-    await vScrollListView(client, parentElem, 0-offset*1.5);
-    _tempElem = await parentElem.$(_target);
+    while(_time < 3 && _tempElem.hasOwnProperty("error")){
+      console.log(_time);
+      console.log(_tempElem.error)
+      _time++;
+      await vScrollListView(client, parentElem, 0-offset*1.5);
+      _tempElem = await parentElem.$(_target);
+    }
+    _time = 0;
+    while(_time < 10 && _tempElem.hasOwnProperty("error")){
+      console.log(_time);
+      console.log(_tempElem.error)
+      _time++;
+      await vScrollListView(client, parentElem, offset);
+      _tempElem = await parentElem.$(_target);
+    }
+    console.log(_tempElem.error);
+    return parentElem.$(_target);
   }
-
-  while(_time < 10 && _tempElem.hasOwnProperty("error")){
-    console.log(_time);
-    console.log(_tempElem)
-    _time++;
-    await vScrollListView(client, parentElem, offset);
-    _tempElem = await parentElem.$(_target);
-  }
-
-  console.log(_tempElem);
-
-  return parentElem.$(_target);
 }
 /**
 * function get the abbrivation of each coin type
