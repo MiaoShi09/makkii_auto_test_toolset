@@ -32,7 +32,8 @@ describe("account related test set",()=>{
     await client.pause(PAUSE_TIMEOUT*6);
     makkii = new ViewElements(client,language,os);
     logger.info("connect to appium");
-    await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
+    //await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
+    await loginFlow(makkii, DEFAULT_PASSWORD,logger);
     logger.divider("Pre-condition: passed");
   })
 

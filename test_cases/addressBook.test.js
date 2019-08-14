@@ -12,7 +12,7 @@ const PAUSE_TIMEOUT=1000; // 1 SEC
 
 
 // internal libs
-const logger = new (require("../libs/logger.js"))(TEST_NAME,true);
+const logger = new (require("../libs/logger.js"))(TEST_NAME,true,"debug");
 const ViewElements = require("../libs/ViewElements");
 const utils = require("../libs/utils");
 const { permissionHandler, eraseDataHandler }  = require("../libs/test_helper/alterFlowHandlers")
@@ -71,6 +71,7 @@ describe("import accouts into address book",()=>{
   });
 
   describe("AAddr#1: add new valid address into address book",()=>{
+    // TODO: need to add precondition that check and navigate to address book section in case some test broke/failed in the middle of the excution
 
     for(let coinType in test_accs){
       it("AAddr#1-"+coinType,async()=>{
@@ -99,7 +100,6 @@ describe("import accouts into address book",()=>{
     }
 
   });
-
 
   describe("AAddr#2: add valid address checksum into address book",()=>{
     for(let coinType in test_accs){
@@ -131,7 +131,6 @@ describe("import accouts into address book",()=>{
       }
     }
   });
-
 
   describe("AAddr#3: add same address",()=>{
     // add same address for each coin coinType
@@ -183,18 +182,24 @@ describe("import accouts into address book",()=>{
 
   })
 
-
-
   describe("AAddr#4: remove address",()=>{
     before(async()=>{
-      logger.divider("AAddr#4-precondition");
-      await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-        logger.debug(addressBookPage);
-        if(addressBookPage.isFullyLoaded) return Promise.resolve();
-        return makkii.loadPage("newContactPage").then((newContactPage)=>{
-          if(newContactPage.isFullyLoaded) return newContactPage.Back_Btn.click();
-        });
+      logger.divider("AAddr#4-precondition: must land on address book page");
+       await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+
+        return makkii.views.addressBookPage.Caption.getText();
+      }).then((caption)=>{
+        if(caption == makkii.views.addressBookPage.Caption[language]){
+          return Promise.resolve();
+        }else{
+          return makkii.loadPage("newContactPage").then((newContactPage)=>{
+            if(newContactPage.isFullyLoaded) return newContactPage.Back_Btn.click();
+            logger.debug("unexpected location");
+            throw new Error("unexpected location");
+          });
+        }
       });
+
 
       await client.pause(PAUSE_TIMEOUT);
     });
@@ -237,66 +242,7 @@ describe("import accouts into address book",()=>{
     }
   });
 
-
-  describe("AAddr#5: invalid address format",()=>{
-    // add same address for each coin coinType
-    beforeEach(async ()=>{
-      logger.divider("AAddr#5-pre: make sure landing on add new contact");
-      await client.pause(10000);
-        await makkii.loadPage("newContactPage").then((newContactPage)=>{
-          logger.debug(newContactPage);
-          if(newContactPage.isFullyLoaded){
-            return Promise.resolve();
-          }else{
-            return makkii.loadPage("addressBookPage")
-                  .then((addressBookPage)=>{
-                    logger.debug(addressBookPage);
-                    return addressBookPage.Add_Btn.click();
-                  });
-          }
-        });
-        logger.divider("AAddr#5-pre: passed");
-    });
-
-    for(let coinType in test_accs){
-
-      for(let otherCoin in test_accs){
-
-        if(coinType != otherCoin){
-
-          it("AAddr#5-"+coinType+" fill with "+ otherCoin,async()=>{
-
-            await client.pause(PAUSE_TIMEOUT);
-            await makkii.loadPage("newContactPage");
-            await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
-            await client.pause(PAUSE_TIMEOUT*2);
-            await makkii.loadPage("selectCoinPage");
-            await makkii.views.selectCoinPage[coinType+"_Btn"].click();
-            await makkii.loadPage("newContactPage");
-            assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coinType));
-            await makkii.views.newContactPage.Contact_Name_TextField.setValue(coinType+otherCoin);
-
-            await client.isKeyboardShown().then((isShown)=>{
-              return isShown? client.hideKeyboard(): Promise.resolve();
-            }).then(()=>{
-              return client.pause(PAUSE_TIMEOUT);
-            });
-
-            await makkii.loadPage("newContactPage");
-            await makkii.views.newContactPage.Address_TextField.setValue(test_accs[otherCoin][0].address);
-            await makkii.views.newContactPage.Save_Btn.click();
-
-            // go back to address book section to check if new address exists
-            await assert.doesNotReject(makkii.findElementByText("Invalid "+ utils.getAbbr(coinType,true) +" address"));
-
-
-          });
-        }
-      }
-    }
-  });
-
-  xdescribe("AAddr#6: ETH/AION prefix",()=>{
+  describe("AAddr#6: ETH/AION prefix",()=>{
 
     var testdata = {};
     testdata.Aion={};
@@ -310,13 +256,23 @@ describe("import accouts into address book",()=>{
     before (async ()=>{
 
 
-      await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-        if(addressBookPage.isFullyLoaded) return Promise.resolve();
-        return makkii.loadPage("newContactPage").then((newContactPage)=>{
-          if(newContactPage.isFullyLoaded) return newContactPage.Back_Btn.click();
-        });
-      });
+    await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
 
+       return makkii.views.addressBookPage.Caption.getText();
+     }).then((caption)=>{
+       logger.debug("expected to get caption of addressBookPage - "+caption);
+       logger.debug(makkii.views.addressBookPage.Caption);
+
+       if(caption == makkii.views.addressBookPage.Caption[language]){
+         return Promise.resolve();
+       }else{
+         return makkii.loadPage("newContactPage").then((newContactPage)=>{
+           if(newContactPage.isFullyLoaded) return newContactPage.Back_Btn.click();
+           logger.debug("unexpected location");
+           throw new Error("unexpected location");
+         });
+       }
+     });
       logger.divider("AAddr#6: ETH/AION prefix; Prepared test data")
 
     });
@@ -410,4 +366,78 @@ describe("import accouts into address book",()=>{
 
   });
 
+  describe("AAddr#5: invalid address format",()=>{
+    // add same address for each coin coinType
+    beforeEach(async ()=>{
+      logger.divider("AAddr#5-pre: make sure landing on add new contact");
+      await makkii.loadPage("newContactPage").then((newContactPage)=>{
+
+       return makkii.views.newContactPage.Caption.getText();
+     }).then((caption)=>{
+       if(caption == makkii.views.newContactPage.Caption[language]){
+         return Promise.resolve();
+       }else{
+         return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+           if(addressBookPage.isFullyLoaded) return addressBookPage.Add_Btn.click();
+           logger.debug("unexpected location");
+           throw new Error("unexpected location");
+         });
+       }
+     });
+        logger.divider("AAddr#5-pre: passed");
+    });
+
+    for(let coinType in test_accs){
+
+      for(let otherCoin in test_accs){
+
+        if(coinType != otherCoin){
+
+          it("AAddr#5-"+coinType+" fill with "+ otherCoin, async()=>{
+
+            await client.pause(PAUSE_TIMEOUT);
+            await makkii.loadPage("newContactPage");
+            await makkii.views.newContactPage.Coin_Type_Select_Btn.click();
+            await client.pause(PAUSE_TIMEOUT*2);
+            await makkii.loadPage("selectCoinPage");
+            await makkii.views.selectCoinPage[coinType+"_Btn"].click();
+            await makkii.loadPage("newContactPage");
+            assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coinType));
+            await makkii.views.newContactPage.Contact_Name_TextField.setValue(coinType+otherCoin);
+
+            await client.isKeyboardShown().then((isShown)=>{
+              return isShown? client.hideKeyboard(): Promise.resolve();
+            }).then(()=>{
+              return client.pause(PAUSE_TIMEOUT);
+            });
+
+            await makkii.loadPage("newContactPage");
+            await makkii.views.newContactPage.Address_TextField.setValue(test_accs[otherCoin][0].address);
+            logger.debug("click back button");
+            await makkii.views.newContactPage.Save_Btn.click();
+            await client.pause(PAUSE_TIMEOUT/2).then(()=>{
+              // go back to address book section to check if new address exists
+              logger.debug("check error msg");
+              return makkii.findElementByText(invalidFormatMsg(coinType)[language]);
+            }).then((Error_Msg)=>{
+              assert.equal(Error_Msg.hasOwnProperty("error"),false);
+            },(e)=>{
+              logger.debug(e);
+              throw e;
+            });
+
+          });
+        }
+      }
+    }
+  });
+
 });
+
+
+function invalidFormatMsg(coinType){
+  return {
+    en:"Invalid "+ utils.getAbbr(coinType,true) +" address",
+    cn:"错误的"+utils.getAbbr(coinType,true) +"地址格式"
+  }
+}

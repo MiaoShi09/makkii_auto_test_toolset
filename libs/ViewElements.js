@@ -43,7 +43,7 @@ class ViewElements{
       let pageElemData = require("../mappedViews/"+pageName+"NameMapping.json");
       var self = this;
       self.views[pageName]={};
-
+      self.views[pageName].isFullyLoaded = false;
       self.views[pageName].isFullyLoaded = await iteratorPageElement(self.views[pageName],self.lang,self.os,pageElemData,self.app,0,true);
 
       return Promise.resolve(this.views[pageName]);
@@ -83,7 +83,7 @@ class ViewElements{
   async findElementByText(content){
     let self = this;
     let elem = await self.app.$('//*[@text="'+content+'"]');
-    console.log(elem);
+
     if(elem.hasOwnProperty("error")) return Promise.reject(elem.error);
     else return Promise.resolve(elem);
 
@@ -104,7 +104,7 @@ async function iteratorPageElement(map,lang,os,data,app,i,isFound){
   if(i == data.length){
     return Promise.resolve(isFound);
   }else{
-    console.log(data[i].mapped_name);
+
     map[data[i].mapped_name] = await generateElement(lang,os,data[i],app);
     for(let proName in data[i]){
 
@@ -122,7 +122,7 @@ async function generateElement(lang, os, data, app){
 
     selector = data.android_xPath;
   }
-  //console.log(selector);
+
   return app.$(selector);
 }
 
@@ -135,7 +135,7 @@ async function checkElement(lang, os, data, app){
     selector = `android=${selector}`;
 
   }
-  //console.log(selector);
+
   return app.$(selector);
 }
 

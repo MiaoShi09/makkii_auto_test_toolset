@@ -25,7 +25,9 @@
       "appPackage": "com.chaion.makkii.qa",
       "appActivity": "com.chaion.makkii.MainActivity",
       "noReset": true,
-      "clearSystemFiles": false
+      "clearSystemFiles": false,
+      "xcodeOrg":"xxx",
+      "xcodeSigningId":"iPhone Developer"
     }
   ]
 }

@@ -146,7 +146,9 @@ async function hScrollPanel(client, element, direction){
 */
 //target: [attribute name, attribute value]
 async function scrollElementIntoView(client, parentElem, target, offset){
-  if(!await parentElem.getAttribute("scrollable"))
+  let _scrollable = await parentElem.getAttribute("scrollable");
+  console.log(_scrollable);
+  if(!_scrollable)
     return Promise.reject("passed element is not scrollable");
 
   // looking for target's parent for now; may add additional arguments pass in function
@@ -174,7 +176,11 @@ async function scrollElementIntoView(client, parentElem, target, offset){
 
   return parentElem.$(_target);
 }
-
+/**
+* function get the abbrivation of each coin type
+* @param {string} coinType the coin type string
+* @param {boolean} mini (optional) whether return a long string or minimized string; default value is false;
+*/
 
 function getAbbr(coinType,mini){
   let _coin_abbr = {

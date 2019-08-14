@@ -103,7 +103,7 @@
   "Delete_Addr_Msg":{
     "mapped_name":"Delete_Addr_Msg",
     "android_class":"android.widget.TextView",
-    "cn":"确定要删除这个地址项？",
+    "cn":"确定要删除这个地址项?",
     "en":"Are you sure you want to delete this address?"
   },
   "Delete_Btn":{
