@@ -4,7 +4,7 @@ const assert = require("assert");
 
 // configurations and data
 const { os, language, port } = require("../configs/os_lang.json");
-const desired_capabilities = (require("../configs/testCapabilies.json")).qa[0];
+const desired_capabilities = (require("../configs/testCapabilies.json")).qa[1];
 const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="account_test";
 const DEFAULT_PASSWORD = "12345678";
@@ -32,8 +32,8 @@ describe("account related test set",()=>{
     await client.pause(PAUSE_TIMEOUT*6);
     makkii = new ViewElements(client,language,os);
     logger.info("connect to appium");
-    //await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
-    await loginFlow(makkii, DEFAULT_PASSWORD,logger);
+    await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
+    // await loginFlow(makkii, DEFAULT_PASSWORD,logger);
     logger.divider("Pre-condition: passed");
   })
 

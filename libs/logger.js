@@ -25,7 +25,7 @@ class Logger{
         console.log("\x1b[96m%s\x1b[0m","[INFO]");
         console.log(info);
       }
-      fs.appendFileSync(this.path,"[INFO]\t"+JSON.stringify(info)+"\n");
+      fs.appendFileSync(this.path,"[INFO] \t"+JSON.stringify(info)+"\n");
     }
   }
 

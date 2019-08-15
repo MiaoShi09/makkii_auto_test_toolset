@@ -4,7 +4,7 @@ const assert = require("assert");
 
 // configurations and data
 const { os, language, port } = require("../configs/os_lang.json");
-const desired_capabilities = (require("../configs/testCapabilies.json")).qa[0];
+const desired_capabilities = (require("../configs/testCapabilies.json")).qa[1];
 const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="address_book_test";
 const DEFAULT_PASSWORD = "12345678";
@@ -283,7 +283,8 @@ describe("import accouts into address book",()=>{
     }
     beforeEach (async ()=>{
 
-      logger.divider("AAddr#6: make sure makkii land on new Contact section")
+      logger.divider("AAddr#6: make sure makkii land on new Contact section");
+      await client.pause(PAUSE_TIMEOUT);
       await makkii.loadPage("newContactPage").then((newContactPage)=>{
 
        return makkii.views.newContactPage.Caption.getText();
@@ -292,13 +293,16 @@ describe("import accouts into address book",()=>{
            return Promise.resolve();
          }else{
            return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-             if(addressBookPage.isFullyLoaded) return addressBookPage.Add_Btn.click();
+              return addressBookPage.Caption.getText();
+           }).then((caption)=>{
+             if(caption == makkii.views.addressBookPage.Caption[language])
+                return makkii.views.addressBookPage.Add_Btn.click();
              logger.debug("unexpected location");
              throw new Error("unexpected location");
            });
          }
        });
-    logger.divider("AAddr#6: precondition completed")
+       logger.divider("AAddr#6: precondition completed")
 
     });
 
@@ -315,7 +319,7 @@ describe("import accouts into address book",()=>{
           await makkii.loadPage("newContactPage");
           assert.equal((await makkii.views.newContactPage.Coin_Type_TextField.getText()),utils.getAbbr(coin));
           await makkii.views.newContactPage.Contact_Name_TextField.setValue(coin+field);
-
+          logger.debug("check if keyboard show up, if so hide it");
           await client.isKeyboardShown().then((isShown)=>{
             return isShown? client.hideKeyboard(): Promise.resolve();
           }).then(()=>{
@@ -323,8 +327,9 @@ describe("import accouts into address book",()=>{
           });
 
           await makkii.loadPage("newContactPage");
-          await makkii.views.newContactPage.Address_TextField.setValue(test_accs[coin][field]);
-          logger.debug("click back button");
+          logger.info("fill in address with "+ testdata[coin][field] );
+          await makkii.views.newContactPage.Address_TextField.setValue(testdata[coin][field]);
+          logger.debug("click save button");
           await makkii.views.newContactPage.Save_Btn.click();
           await client.pause(PAUSE_TIMEOUT/2).then(()=>{
             // go back to address book section to check if new address exists

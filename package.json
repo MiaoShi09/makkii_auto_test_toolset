@@ -5,7 +5,7 @@
   "main": "MAK-81.js",
   "scripts": {
     "testAll": "./node_modules/.bin/mocha test_cases/* --no-timeouts",
-    "addressTest": "./node_modules/.bin/mocha test_cases/address.test.js --no-timeouts",
+    "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --no-timeouts",
     "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --no-timeouts",
     "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --no-timeouts"
   },

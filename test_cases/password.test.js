@@ -9,10 +9,10 @@ const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="password_test";
 const FINAL_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
-
+const LOG_LEVEL = 'info';
 
 // internal libs
-const logger = new (require("../libs/logger.js"))(TEST_NAME,true);
+const logger = new (require("../libs/logger.js"))(TEST_NAME,true,LOG_LEVEL);
 const ViewElements = require("../libs/ViewElements");
 const utils = require("../libs/utils");
 const { permissionHandler, eraseDataHandler }  = require("../libs/test_helper/alterFlowHandlers")
@@ -25,6 +25,14 @@ describe("password format test suite",()=>{
   var client, makkii, oldPassword;
 
   before((done)=>{
+    logger.divider("TEST NAME: "+ TEST_NAME);
+    logger.divider("TEST INFORMATION ");
+    logger.info(" > Operating System: "+ os);
+    logger.info(" > System language: "+ language);
+    logger.info(" > Desired Capabilities: " + JSON.stringify(desired_capabilities));
+    logger.info(" > Test Log Level: "+ LOG_LEVEL);
+    logger.info(" > Expected Final Test Password: " + FINAL_PASSWORD);
+
     logger.divider("password format test suite/Pre-steps: connect to MAKKII");
     remote({
       port:port,
@@ -33,7 +41,7 @@ describe("password format test suite",()=>{
     }).then((app)=>{
       client = app;
       makkii = new ViewElements(client,language,os);
-      logger.divider("password format test suite/Pre-steps: completed\n");
+      logger.divider("password format test suite/Pre-steps: completed");
       done();
     })
 
@@ -339,7 +347,8 @@ describe("password format test suite",()=>{
       })
 
       // validate loading location: if main menu is loaded on the screen
-
+      await client.pause(PAUSE_TIMEOUT);
+      logger.debug((await makkii.loadPage("mainMenu")));
       assert.equal((await makkii.loadPage("mainMenu")).isFullyLoaded,true);
 
 
@@ -534,10 +543,11 @@ describe("password format test suite",()=>{
       await makkii.views.changePasswordPage.Confirm_Password_TextField.setValue(_newPassword);
       await makkii.views.changePasswordPage.Save_Btn.click();
 
-      await client.pause(PAUSE_TIMEOUT);
+      await client.pause(PAUSE_TIMEOUT*2);
       await logoutFlow(makkii,logger);
       // use new password to login makkii to make sure the new password has been updated
       await loginFlow(makkii, _newPassword, logger);
+      await client.pause(PAUSE_TIMEOUT*2);
       assert.equal((await makkii.loadPage("mainMenu")).isFullyLoaded,true);
 
       logger.info("new passsword updated to: " + _newPassword);

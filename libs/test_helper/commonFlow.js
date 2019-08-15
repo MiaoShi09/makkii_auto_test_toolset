@@ -27,7 +27,7 @@ function logoutFlow(app,logger){
     logger.debug("fall in tracking main memu ");
     logger.debug(mainMenu);
     logger.debug("checking mainMemu.Settings_Btn.isExisting()");
-    logger.debug(mainMenu.Settings_Btn.isExisting());
+    
     return mainMenu.Settings_Btn.isExisting();
   }).then((isExist)=>{
     logger.debug("main memu exists: "+isExist);

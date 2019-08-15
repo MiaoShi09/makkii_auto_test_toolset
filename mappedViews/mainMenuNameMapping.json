@@ -6,7 +6,7 @@
   },
   {
     "mapped_name":"Dapp_Btn",
-    "android_xPath":"//android.widget.Button[@content-desc=\"signed_dapp, tab, 2 of 4\"]",
+    "android_xPath":"//android.widget.Button[@content-desc=\"signed_dapps, tab, 2 of 4\"]",
     "cn":"应用"
   },
   {
