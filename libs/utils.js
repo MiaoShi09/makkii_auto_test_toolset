@@ -1,4 +1,4 @@
-
+var logger = require("./logger")._currentInstance();
 
 /**
 * function to generate a valid password
@@ -7,7 +7,6 @@
 */
 function generateValidPassword(){
   let passwordLen = Math.floor(Math.random()*8)+8;
-  console.log("passwordLen is "+ passwordLen);
   let passwordBuff = new Buffer.allocUnsafe(passwordLen);
   for(let i = 0; i < passwordLen;i++){
     do {
@@ -16,7 +15,6 @@ function generateValidPassword(){
 
     passwordBuff[i] = randChar;
   }
-  console.log(passwordBuff.toString("ascii"));
   return passwordBuff.toString("ascii");
 }
 
@@ -41,7 +39,7 @@ function generateInvalidPassword(errorType){
 }
 
 function generateShortPassword(){
-  let passwordLen = Math.floor(Math.random()*8);
+  let passwordLen = Math.floor(Math.random()*7)+1;
   let passwordBuff = new Buffer.allocUnsafe(passwordLen);
   for(let i = 0; i < passwordLen;i++){
       do {
@@ -75,9 +73,6 @@ function generateInvalidCharacterPassword(){
   return passwordBuff.toString("ascii");
 }
 
-
-
-
 /**
 * async function to parse mnemonic and check if seed phrase have some words
 * @param {Array<webdriver.element>} 12 web elements that contains seed phrase
@@ -86,7 +81,6 @@ function generateInvalidCharacterPassword(){
 async function haveSameWords(seedPhraseNodes){
   const MNE_LEN = 12;
   if(seedPhraseNodes.length != MNE_LEN){
-    console.log("Invalid seed phrase node number: "+ seedPhraseNodes.length);
     throw new Error("Invalid seed phrase node number: "+ seedPhraseNodes.length);
   }
   let wordSet = new Set();
@@ -96,7 +90,7 @@ async function haveSameWords(seedPhraseNodes){
     wordSet.add(word);
     wordArray[i] = word;
   }
-  console.log(wordArray);
+  logger.log(wordArray);
   return Promise.resolve(wordSet.size < 12);
 }
 
@@ -147,32 +141,26 @@ async function hScrollPanel(client, element, direction){
 //target: [attribute name, attribute value]
 async function scrollElementIntoView(client, parentElem, target, offset){
   let _scrollable = await parentElem.getAttribute("scrollable");
-  console.log("_isScrollable: "+_scrollable);
-  console.log("typeof _isScrollable" + (typeof _scrollable));
+  let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]/..";
   if(!JSON.parse(_scrollable)){
-    return Promise.reject("passed element is not scrollable");
+    logger.debug("passed element is not scrollable");
+    return parentElem.$(_target);
   }else{
     // looking for target's parent for now; may add additional arguments pass in function
-    let _target = "//*[@"+target[0]+"=\""+target[1]+"\"]/..";
     let _time = 0;
     let _tempElem = await parentElem.$(_target);
 
     while(_time < 3 && _tempElem.hasOwnProperty("error")){
-      console.log(_time);
-      console.log(_tempElem.error)
       _time++;
       await vScrollListView(client, parentElem, 0-offset*1.5);
       _tempElem = await parentElem.$(_target);
     }
     _time = 0;
     while(_time < 10 && _tempElem.hasOwnProperty("error")){
-      console.log(_time);
-      console.log(_tempElem.error)
       _time++;
       await vScrollListView(client, parentElem, offset);
       _tempElem = await parentElem.$(_target);
     }
-    console.log(_tempElem.error);
     return parentElem.$(_target);
   }
 }
