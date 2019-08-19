@@ -24,6 +24,7 @@ describe("account related test set",function(){
   var makkii, client;
 
   before(async function(){
+    logger.updateTest(this.test);
     logger.divider("TEST NAME: "+ TEST_NAME);
     logger.divider("TEST INFORMATION ");
     logger.info(" > Operating System: "+ os);
@@ -44,9 +45,12 @@ describe("account related test set",function(){
     await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
     // await loginFlow(makkii, DEFAULT_PASSWORD,logger);
     logger.divider("Pre-condition: passed");
-  })
-
+  });
+  beforeEach(function(){
+    logger.updateTest(this.currentTest);
+  });
   describe("AAccImp#1: add crypto coin from HD",function(){
+
 
     it("AAccImp#1-Aion: add Aion account", async function(){
       logger.divider("AAccImp#1-Aion: add Aion account");

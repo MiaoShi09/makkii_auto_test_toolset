@@ -24,7 +24,8 @@ const { loginFlow, logoutFlow } = require("../libs/test_helper/commonFlow");
 describe("password format test suite", function(){
   var client, makkii, oldPassword;
 
-  before((done)=>{
+  before(function (done){
+    logger.updateTest(this.test);
     logger.divider("TEST NAME: "+ TEST_NAME);
     logger.divider("TEST INFORMATION ");
     logger.info(" > Operating System: "+ os);
@@ -53,6 +54,7 @@ describe("password format test suite", function(){
 
 
     before(async function(){
+      logger.updateTest(this.currentTest);
       logger.divider("password on register/Pre-steps: landing on registerPage");
       await makkii.isLoaded("Login_Btn");
       await makkii.loadPage("logInPage");
@@ -63,6 +65,7 @@ describe("password format test suite", function(){
 
 
     beforeEach(function (done){
+      logger.updateTest(this.currentTest);
       logger.divider("password on register/pre-each: checking if on registration section");
       makkii.loadPage("registerPage").then(function (done){
         return makkii.views.registerPage.Register_Cap.getText();
@@ -253,10 +256,10 @@ describe("password format test suite", function(){
       logger.divider("password on recovery/pre-condition: passed");
     });
 
-    // beforeEach(async ()=>{
-    //
-    //
-    // })
+    beforeEach(function(){
+      logger.updateTest(this.currentTest);
+
+    })
 
     it("APC#1:recovery password too long",async function(){
       logger.divider("APC#1:recovery password too long");
@@ -421,6 +424,7 @@ describe("password format test suite", function(){
 
 
     beforeEach(async function(){
+      logger.updateTest(this.currentTest);
       logger.divider("pre-each: navigate to changing password settings");
       if(await makkii.views.settingsPage.ChangePassword_Btn.isExisting())
       await makkii.views.settingsPage.ChangePassword_Btn.click().then(()=>{

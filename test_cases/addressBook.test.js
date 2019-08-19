@@ -9,7 +9,7 @@ const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="address_book_test";
 const DEFAULT_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
-const LOG_LEVEL = 'debug';
+const LOG_LEVEL = 'info';
 
 
 // internal libs
@@ -27,6 +27,7 @@ describe("import accouts into address book",function(){
   var test_accs = TEST_DATA.accounts;
 
   before(async function(){
+    logger.updateTest(this.test);
     logger.divider("TEST NAME: "+ TEST_NAME);
     logger.divider("TEST INFORMATION ");
     logger.info(" > Operating System: "+ os);
@@ -67,6 +68,7 @@ describe("import accouts into address book",function(){
   })
 
   beforeEach(async function(){
+    logger.updateTest(this.currentTest);
     logger.divider("Pre-condition: make sure makkii navigate to address book section");
     await makkii.loadPage("addressBookPage");
 
@@ -86,7 +88,7 @@ describe("import accouts into address book",function(){
     // TODO: need to add precondition that check and navigate to address book section in case some test broke/failed in the middle of the excution
 
     for(let coinType in test_accs){
-      it("AAddr#1-"+coinType,async()=>{
+      it("AAddr#1-"+coinType,async function(){
         logger.divider("AAddr#1-"+coinType);
         await makkii.views.addressBookPage.Add_Btn.click();
         await client.pause(PAUSE_TIMEOUT);
@@ -119,7 +121,7 @@ describe("import accouts into address book",function(){
     for(let coinType in test_accs){
 
       if(test_accs[coinType][1].checksum !== undefined){
-        it("AAddr#2-"+coinType,async()=>{
+        it("AAddr#2-"+coinType,async function(){
           await makkii.views.addressBookPage.Add_Btn.click();
           await client.pause(PAUSE_TIMEOUT);
           await makkii.loadPage("newContactPage");
@@ -149,6 +151,7 @@ describe("import accouts into address book",function(){
   describe("AAddr#3: add same address",function(){
     // add same address for each coin coinType
     beforeEach(async function(){
+      logger.updateTest(this.currentTest);
       logger.divider("make sure landing on add new contact");
       await client.pause(10000);
         await makkii.loadPage("newContactPage").then((newContactPage)=>{
@@ -228,6 +231,7 @@ describe("import accouts into address book",function(){
 
   describe("AAddr#4: remove address",function(){
     before( async function(){
+      logger.updateTest(this.test);
       logger.divider("AAddr#4-precondition: must land on address book page");
       await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
         return makkii.views.addressBookPage.Caption.getText();
@@ -305,7 +309,7 @@ describe("import accouts into address book",function(){
       testdata[coin].checksumNoPrefix = test_accs[coin][0].checksum.substring(2,66);
     }
     beforeEach (async function(){
-
+      logger.updateTest(this.currentTest);
       logger.divider("AAddr#6: make sure makkii land on new Contact section");
       await client.pause(PAUSE_TIMEOUT);
       await makkii.loadPage("newContactPage").then((newContactPage)=>{
@@ -374,7 +378,8 @@ describe("import accouts into address book",function(){
 
   describe("AAddr#5: invalid address format",function(){
     // add same address for each coin coinType
-    beforeEach(async ()=>{
+    beforeEach(async function(){
+      logger.updateTest(this.currentTest);
       logger.divider("AAddr#5-pre: make sure landing on add new contact");
       await makkii.loadPage("newContactPage").then((newContactPage)=>{
 
