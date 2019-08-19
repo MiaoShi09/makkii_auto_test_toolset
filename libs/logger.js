@@ -8,8 +8,13 @@ const LEVEL_VALUE={
   info:1,
   debug:2
 }
+var _instance = null;
 
 class Logger{
+  static _currentInstance(){
+    return _instance;
+  }
+
   constructor(name, enableConsoleLog,level){
     if (!fs.existsSync(DEFAULT_LOG_FOLDER)){
         fs.mkdirSync(DEFAULT_LOG_FOLDER);
@@ -17,6 +22,7 @@ class Logger{
     this.path = DEFAULT_LOG_FOLDER+"/"+name+ Date.now().toString()+".txt";
     this.level = LEVEL_VALUE[level] || LEVEL_VALUE["info"];
     this.enableConsoleLog = enableConsoleLog || true;
+    _instance = this;
   }
 
   info(info){
