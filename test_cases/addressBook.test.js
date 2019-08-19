@@ -9,10 +9,11 @@ const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="address_book_test";
 const DEFAULT_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
+const LOG_LEVEL = 'debug';
 
 
 // internal libs
-const logger = new (require("../libs/logger.js"))(TEST_NAME,true,"debug");
+const logger = new (require("../libs/logger.js"))(TEST_NAME,true,LOG_LEVEL);
 const ViewElements = require("../libs/ViewElements");
 const utils = require("../libs/utils");
 const { permissionHandler, eraseDataHandler }  = require("../libs/test_helper/alterFlowHandlers")
@@ -26,6 +27,14 @@ describe("import accouts into address book",()=>{
   var test_accs = TEST_DATA.accounts;
 
   before(async ()=>{
+    logger.divider("TEST NAME: "+ TEST_NAME);
+    logger.divider("TEST INFORMATION ");
+    logger.info(" > Operating System: "+ os);
+    logger.info(" > System language: "+ language);
+    logger.info(" > Desired Capabilities: " + JSON.stringify(desired_capabilities));
+    logger.info(" > Test Log Level: "+ LOG_LEVEL);
+    logger.info(" > Expected Test Password: " + DEFAULT_PASSWORD);
+
     logger.divider("Pre-condition: connect to device and login Makkii");
 
     client = await remote({
@@ -36,7 +45,8 @@ describe("import accouts into address book",()=>{
     await client.pause(PAUSE_TIMEOUT*6);
     makkii = new ViewElements(client,language,os);
     logger.info("connect to appium");
-    await loginFlow(makkii, DEFAULT_PASSWORD,logger)
+    logger.info("try to log in existing account or recover an account");
+    await loginFlow(makkii, DEFAULT_PASSWORD,logger);
     await client.pause(PAUSE_TIMEOUT);
     await makkii.getOrphanElem("Error_Popup").then((Error_Popup)=>{
       logger.debug("fall in alternal flow");
@@ -52,12 +62,14 @@ describe("import accouts into address book",()=>{
       return Promise.resolve();
     })
     //test_accs = TEST_DATA.accounts;
+    logger.info("expected landing wallet section");
     logger.divider("Pre-condition: passed");
   })
 
   beforeEach(async ()=>{
     logger.divider("Pre-condition: make sure makkii navigate to address book section");
     await makkii.loadPage("addressBookPage");
+
     await makkii.views.addressBookPage.Caption.getText().catch(async(e)=>{
       await makkii.loadPage("mainMenu");
       await makkii.views.mainMenu.Settings_Btn.click();
@@ -75,6 +87,7 @@ describe("import accouts into address book",()=>{
 
     for(let coinType in test_accs){
       it("AAddr#1-"+coinType,async()=>{
+        logger.divider("AAddr#1-"+coinType);
         await makkii.views.addressBookPage.Add_Btn.click();
         await client.pause(PAUSE_TIMEOUT);
         await makkii.loadPage("newContactPage");
@@ -96,6 +109,7 @@ describe("import accouts into address book",()=>{
         },()=>{
           return assert.doesNotReject(makkii.findElementByText(coinType+"_pk"));
         });
+        logger.divider("AAddr#1-"+coinType+": passed");
       });
     }
 
@@ -213,10 +227,9 @@ describe("import accouts into address book",()=>{
   })
 
   describe("AAddr#4: remove address",()=>{
-    before(async()=>{
+    before( async()=>{
       logger.divider("AAddr#4-precondition: must land on address book page");
-       await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
-
+      await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
         return makkii.views.addressBookPage.Caption.getText();
       }).then((caption)=>{
         if(caption == makkii.views.addressBookPage.Caption[language]){
@@ -228,8 +241,17 @@ describe("import accouts into address book",()=>{
             throw new Error("unexpected location");
           });
         }
-      });
+      },()=>{
 
+          return makkii.loadPage("mainMenu").then(()=>{
+            return makkii.views.mainMenu.Settings_Btn.click();
+          }).then(()=>{
+            return makkii.loadPage("settingsPage");
+          }).then(()=>{
+             return makkii.views.settingsPage.AddressBook_Btn.click();
+          })
+
+      });
 
       await client.pause(PAUSE_TIMEOUT);
     });
@@ -239,7 +261,6 @@ describe("import accouts into address book",()=>{
 
         await makkii.loadPage("addressBookPage");
         await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
-
         .then((parent)=>{
           logger.debug(parent);
           return utils.hScrollPanel(client,parent,-1);
@@ -263,8 +284,10 @@ describe("import accouts into address book",()=>{
         await makkii.loadPage("addressBookPage");
         await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
         .then((elem)=>{
+          logger.debug(elem);
           assert.equal(elem.hasOwnProperty("error"),true);
-        },()=>{
+        },(e)=>{
+          logger.debug(e);
           return assert.rejects(makkii.findElementByText(coinType+"_pk"));
         });
 

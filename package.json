@@ -4,10 +4,11 @@
   "description": "makkii wallet test automation toolset",
   "main": "MAK-81.js",
   "scripts": {
-    "testAll": "./node_modules/.bin/mocha test_cases/* --no-timeouts",
-    "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --no-timeouts",
-    "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --no-timeouts",
-    "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --no-timeouts"
+    "testAll": "./node_modules/.bin/mocha test_cases --reporter-options mochaFile=test_reports/fullTest-$(date +%Y%m%d%H%M).xml --no-timeouts",
+    "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --reporter-options mochaFile=test_reports/account-$(date +%Y%m%d%H%M).xml --no-timeouts",
+    "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --reporter-options mochaFile=test_reports/password-$(date +%Y%m%d%H%M).xml --no-timeouts",
+    "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --reporter-options mochaFile=test_reports/addressBook-$(date +%Y%m%d%H%M).xml --no-timeouts",
+    "checkMAK81":"node MAK-81"
   },
   "author": "",
   "license": "ISC",
@@ -17,13 +18,14 @@
     "webdriverio": "^5.11.11"
   },
   "devDependencies": {
+    "@wdio/appium-service": "*",
     "@wdio/cli": "^5.11.12",
     "@wdio/local-runner": "^5.11.12",
     "@wdio/mocha-framework": "^5.11.0",
     "@wdio/spec-reporter": "^5.11.7",
     "@wdio/sync": "^5.11.11",
     "chromedriver": "^76.0.0",
-    "wdio-chromedriver-service": "^5.0.2",
-    "@wdio/appium-service": "*"
+    "mocha-junit-reporter": "^1.23.1",
+    "wdio-chromedriver-service": "^5.0.2"
   }
 }
