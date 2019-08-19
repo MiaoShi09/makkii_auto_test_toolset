@@ -21,7 +21,7 @@ const { loginFlow, logoutFlow } = require("../libs/test_helper/commonFlow");
 
 
 
-describe("password format test suite",()=>{
+describe("password format test suite", function(){
   var client, makkii, oldPassword;
 
   before((done)=>{
@@ -49,10 +49,10 @@ describe("password format test suite",()=>{
   });
 
 
-  describe("password on register",()=>{
+  describe("password on register",function(){
 
 
-    before(async()=>{
+    before(async function(){
       logger.divider("password on register/Pre-steps: landing on registerPage");
       await makkii.isLoaded("Login_Btn");
       await makkii.loadPage("logInPage");
@@ -62,9 +62,9 @@ describe("password format test suite",()=>{
     });
 
 
-    beforeEach((done)=>{
+    beforeEach(function (done){
       logger.divider("password on register/pre-each: checking if on registration section");
-      makkii.loadPage("registerPage").then((done)=>{
+      makkii.loadPage("registerPage").then(function (done){
         return makkii.views.registerPage.Register_Cap.getText();
       }).then((text)=>{
 
@@ -80,8 +80,8 @@ describe("password format test suite",()=>{
 
 
 
-    it("APR#1:registration password too long",async()=>{
-      logger.divider("APR#1:registration password too long")
+    it("APR#1:registration password too long",async function(){
+      logger.divider(this.test.title)
       let _longPassword = utils.generateInvalidPassword(1);
       logger.info("random generated password:   "+ _longPassword);
       await makkii.loadPage("registerPage");
@@ -109,7 +109,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APR#2:registration password too short",async()=>{
+    it("APR#2:registration password too short",async function(){
       logger.divider("APR#2:registration password too short");
       let _shortPassword = utils.generateInvalidPassword(0);
       logger.info("random generated password:     "+ _shortPassword);
@@ -136,7 +136,7 @@ describe("password format test suite",()=>{
       logger.divider("APR#2 passed");
     });
 
-    it("APR#3:registration password contains invaild characters",async()=>{
+    it("APR#3:registration password contains invaild characters",async function(){
       logger.divider("APR#3:registration password contains invaild characters");
       let _wrongFormatPassword = utils.generateInvalidPassword(2);
       logger.info("random generated password:     "+ _wrongFormatPassword);
@@ -164,7 +164,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APR#4:registration passwords unmatch",async()=>{
+    it("APR#4:registration passwords unmatch",async function(){
       logger.divider("APR#3:registration passwords unmatch");
       let _password1 = utils.generateValidPassword();
       let _password2 = utils.generateValidPassword();
@@ -195,7 +195,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APR#5:registration password success",async()=>{
+    it("APR#5:registration password success",async function(){
       logger.divider("APR#4:registration password success");
       let _password1 = utils.generateValidPassword();
 
@@ -236,7 +236,7 @@ describe("password format test suite",()=>{
   });
 
 
-  describe("password on recovery",()=>{
+  describe("password on recovery", function (){
     before(async ()=>{
       logger.divider("password on recovery/pre-condition: expected loading on recoveryPasswordPage");
       await logoutFlow(makkii, logger);
@@ -258,7 +258,7 @@ describe("password format test suite",()=>{
     //
     // })
 
-    it("APC#1:recovery password too long",async ()=>{
+    it("APC#1:recovery password too long",async function(){
       logger.divider("APC#1:recovery password too long");
       let _password1 = utils.generateInvalidPassword(1);
       logger.info("invalid long password:" + _password1);
@@ -284,7 +284,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APC#2:recovery password too short",async ()=>{
+    it("APC#2:recovery password too short",async function(){
       logger.divider("APC#2:recovery password too short");
       let _password1 = utils.generateInvalidPassword(0);
       logger.info("invalid short password:" + _password1);
@@ -310,7 +310,7 @@ describe("password format test suite",()=>{
 
 
     // currently skip APC#3 wait for MAK-84 fixed
-    it("APC#3:recovery passwords do not match",async ()=>{
+    it("APC#3:recovery passwords do not match",async function(){
 
       logger.divider("APC#3:recovery passwords do not match");
       let _password1 = utils.generateValidPassword();
@@ -342,7 +342,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APC#4:recovery password contains invalid character",async ()=>{
+    it("APC#4:recovery password contains invalid character",async function(){
       logger.divider("APC#4:recovery password contains invalid character");
       let _password1 = utils.generateInvalidPassword(2);
       logger.info("invalid character password:" + _password1);
@@ -366,7 +366,7 @@ describe("password format test suite",()=>{
       logger.divider("APC#4 passed");
     });
 
-    it("APC#5:positive recovery account flow",async ()=>{
+    it("APC#5:positive recovery account flow",async function(){
       logger.divider("APC#5:positive recovery account flow");
       let _password1 = utils.generateValidPassword();
       logger.info("correct password:" + _password1);
@@ -403,8 +403,8 @@ describe("password format test suite",()=>{
 
 
 
-  describe("password on changing password",()=>{
-    before(async ()=>{
+  describe("password on changing password",function(){
+    before(async function(){
       logger.divider("pre-condition: log in account and navigate to Settings section.");
       oldPassword = oldPassword || FINAL_PASSWORD;
       await makkii.isLoaded("Login_Btn").then(()=>{
@@ -420,7 +420,7 @@ describe("password format test suite",()=>{
     });
 
 
-    beforeEach(async()=>{
+    beforeEach(async function(){
       logger.divider("pre-each: navigate to changing password settings");
       if(await makkii.views.settingsPage.ChangePassword_Btn.isExisting())
       await makkii.views.settingsPage.ChangePassword_Btn.click().then(()=>{
@@ -433,7 +433,7 @@ describe("password format test suite",()=>{
       })
     })
 
-    it("APCh#1: old password is incorrect", async ()=>{
+    it("APCh#1: old password is incorrect", async function(){
       logger.divider("APCh#1: old password is incorrect");
       let _wrongPassword = utils.generateValidPassword();
       while(_wrongPassword == oldPassword){
@@ -464,7 +464,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APCh#2: new password is too long", async ()=>{
+    it("APCh#2: new password is too long", async function(){
       logger.divider("APCh#2: new password is too long");
       let _newPassword = utils.generateInvalidPassword(1);
       logger.info("invalid new password: "+ _newPassword);
@@ -489,7 +489,7 @@ describe("password format test suite",()=>{
       logger.divider("APCh#2 passed");
     });
 
-    it("APCh#3: new password is too short", async ()=>{
+    it("APCh#3: new password is too short", async function(){
       logger.divider("APCh#3: new password is too short");
       let _newPassword = utils.generateInvalidPassword(0);
       logger.info("invalid new password: "+ _newPassword);
@@ -514,7 +514,7 @@ describe("password format test suite",()=>{
       logger.divider("APCh#3 passed");
     });
 
-    it("APCh#4: new passwords do not match", async ()=>{
+    it("APCh#4: new passwords do not match", async function(){
       logger.divider("APCh#4: new passwords do not match");
       let _newPassword1 = utils.generateValidPassword();
       let _newPassword2 = utils.generateValidPassword();
@@ -544,7 +544,7 @@ describe("password format test suite",()=>{
     });
 
 
-    it("APCh#5: new password contains invalid character", async ()=>{
+    it("APCh#5: new password contains invalid character", async function(){
       logger.divider("APCh#5: new password contains invalid character");
       let _newPassword = utils.generateInvalidPassword(2);
       await makkii.views.changePasswordPage.Old_Password_TextField.setValue(oldPassword);
@@ -566,7 +566,7 @@ describe("password format test suite",()=>{
       logger.divider("APCh#5 passed");
     });
 
-    it("APCh#6: old password and new password are the same", async ()=>{
+    it("APCh#6: old password and new password are the same", async function(){
       logger.divider("APCh#6: old password and new password are the same");
 
       await makkii.views.changePasswordPage.Old_Password_TextField.setValue(oldPassword);
@@ -589,7 +589,7 @@ describe("password format test suite",()=>{
       logger.divider("APCh#6 passed");
     });
 
-    it("APCh#7: positive changing password workflow", async ()=>{
+    it("APCh#7: positive changing password workflow", async function(){
       logger.divider("APCh#7: positive changing password workflow");
       let _newPassword = FINAL_PASSWORD;
       await makkii.views.changePasswordPage.Old_Password_TextField.setValue(oldPassword);

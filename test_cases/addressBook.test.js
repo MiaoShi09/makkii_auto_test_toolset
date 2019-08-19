@@ -22,11 +22,11 @@ const { loginFlow, recoveryFlow } = require("../libs/test_helper/commonFlow");
 
 
 
-describe("import accouts into address book",()=>{
+describe("import accouts into address book",function(){
   var makkii, client;
   var test_accs = TEST_DATA.accounts;
 
-  before(async ()=>{
+  before(async function(){
     logger.divider("TEST NAME: "+ TEST_NAME);
     logger.divider("TEST INFORMATION ");
     logger.info(" > Operating System: "+ os);
@@ -66,7 +66,7 @@ describe("import accouts into address book",()=>{
     logger.divider("Pre-condition: passed");
   })
 
-  beforeEach(async ()=>{
+  beforeEach(async function(){
     logger.divider("Pre-condition: make sure makkii navigate to address book section");
     await makkii.loadPage("addressBookPage");
 
@@ -82,7 +82,7 @@ describe("import accouts into address book",()=>{
 
   });
 
-  describe("AAddr#1: add new valid address into address book",()=>{
+  describe("AAddr#1: add new valid address into address book",function(){
     // TODO: need to add precondition that check and navigate to address book section in case some test broke/failed in the middle of the excution
 
     for(let coinType in test_accs){
@@ -115,7 +115,7 @@ describe("import accouts into address book",()=>{
 
   });
 
-  describe("AAddr#2: add valid address checksum into address book",()=>{
+  describe("AAddr#2: add valid address checksum into address book",function(){
     for(let coinType in test_accs){
 
       if(test_accs[coinType][1].checksum !== undefined){
@@ -146,9 +146,9 @@ describe("import accouts into address book",()=>{
     }
   });
 
-  describe("AAddr#3: add same address",()=>{
+  describe("AAddr#3: add same address",function(){
     // add same address for each coin coinType
-    beforeEach(async ()=>{
+    beforeEach(async function(){
       logger.divider("make sure landing on add new contact");
       await client.pause(10000);
         await makkii.loadPage("newContactPage").then((newContactPage)=>{
@@ -167,7 +167,7 @@ describe("import accouts into address book",()=>{
     })
 
     for(let coinType in test_accs){
-      it("AAddr#3-"+coinType,async()=>{
+      it("AAddr#3-"+coinType,async function(){
 
         await client.pause(PAUSE_TIMEOUT);
         await makkii.loadPage("newContactPage");
@@ -196,7 +196,7 @@ describe("import accouts into address book",()=>{
 
     for(let coinType in test_accs){
       if(coinType == "Aion" || coinType == "Ethereum"){
-        it("AAddr#3-"+coinType + " checksum duplication",async()=>{
+        it("AAddr#3-"+coinType + " checksum duplication",async function(){
 
           await client.pause(PAUSE_TIMEOUT);
           await makkii.loadPage("newContactPage");
@@ -226,8 +226,8 @@ describe("import accouts into address book",()=>{
 
   })
 
-  describe("AAddr#4: remove address",()=>{
-    before( async()=>{
+  describe("AAddr#4: remove address",function(){
+    before( async function(){
       logger.divider("AAddr#4-precondition: must land on address book page");
       await makkii.loadPage("addressBookPage").then((addressBookPage)=>{
         return makkii.views.addressBookPage.Caption.getText();
@@ -257,7 +257,7 @@ describe("import accouts into address book",()=>{
     });
 
     for(let coinType in test_accs){
-      it("AAddr#4-"+coinType,async()=>{
+      it("AAddr#4-"+coinType,async function(){
 
         await makkii.loadPage("addressBookPage");
         await utils.scrollElementIntoView(client, makkii.views.addressBookPage.Address_List,["text", coinType+"_pk"],150)
@@ -295,7 +295,7 @@ describe("import accouts into address book",()=>{
     }
   });
 
-  describe("AAddr#6: ETH/AION no prefix is invalid format",()=>{
+  describe("AAddr#6: ETH/AION no prefix is invalid format",function(){
 
     var testdata = {};
     testdata.Aion={};
@@ -304,7 +304,7 @@ describe("import accouts into address book",()=>{
       testdata[coin].noprefix = test_accs[coin][0].address.substring(2,66);
       testdata[coin].checksumNoPrefix = test_accs[coin][0].checksum.substring(2,66);
     }
-    beforeEach (async ()=>{
+    beforeEach (async function(){
 
       logger.divider("AAddr#6: make sure makkii land on new Contact section");
       await client.pause(PAUSE_TIMEOUT);
@@ -331,7 +331,7 @@ describe("import accouts into address book",()=>{
 
     for(let coin in testdata){
       for(let field in testdata[coin]){
-        it("AAddr#6-"+coin+" fill with "+ field, async()=>{
+        it("AAddr#6-"+coin+" fill with "+ field, async function(){
 
           await client.pause(PAUSE_TIMEOUT);
           await makkii.loadPage("newContactPage");
@@ -372,7 +372,7 @@ describe("import accouts into address book",()=>{
 
   });
 
-  describe("AAddr#5: invalid address format",()=>{
+  describe("AAddr#5: invalid address format",function(){
     // add same address for each coin coinType
     beforeEach(async ()=>{
       logger.divider("AAddr#5-pre: make sure landing on add new contact");
@@ -399,7 +399,7 @@ describe("import accouts into address book",()=>{
 
         if(coinType != otherCoin){
 
-          it("AAddr#5-"+coinType+" fill with "+ otherCoin, async()=>{
+          it("AAddr#5-"+coinType+" fill with "+ otherCoin, async function(){
 
             await client.pause(PAUSE_TIMEOUT);
             await makkii.loadPage("newContactPage");
