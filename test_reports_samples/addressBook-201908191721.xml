@@ -1,0 +1,2015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="400.15099999999995" tests="43" failures="8">
+  <testsuite name="Root Suite" timestamp="2019-08-19T09:21:12" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="import accouts into address book" timestamp="2019-08-19T09:21:12" tests="0" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="AAddr#1: add new valid address into address book" timestamp="2019-08-19T09:21:25" tests="5" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="0" time="42.338">
+    <testcase name="import accouts into address book AAddr#1: add new valid address into address book AAddr#1-Aion" time="8.189" classname="AAddr#1-Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#1-Aion---------------------------
+
+[DEBUG] passed element is not scrollable
+--------------------------------AAddr#1-Aion: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#1: add new valid address into address book AAddr#1-Ethereum" time="8.597" classname="AAddr#1-Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#1-Ethereum---------------------------
+
+[DEBUG] passed element is not scrollable
+--------------------------------AAddr#1-Ethereum: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#1: add new valid address into address book AAddr#1-Bitcoin" time="8.307" classname="AAddr#1-Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#1-Bitcoin---------------------------
+
+[DEBUG] passed element is not scrollable
+--------------------------------AAddr#1-Bitcoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#1: add new valid address into address book AAddr#1-Litecoin" time="8.62" classname="AAddr#1-Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#1-Litecoin---------------------------
+
+[DEBUG] passed element is not scrollable
+--------------------------------AAddr#1-Litecoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#1: add new valid address into address book AAddr#1-Tron" time="8.625" classname="AAddr#1-Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#1-Tron---------------------------
+
+[DEBUG] passed element is not scrollable
+--------------------------------AAddr#1-Tron: passed---------------------------
+</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAddr#2: add valid address checksum into address book" timestamp="2019-08-19T09:22:14" tests="2" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="0" time="29.433">
+    <testcase name="import accouts into address book AAddr#2: add valid address checksum into address book AAddr#2-Aion" time="7.644" classname="AAddr#2-Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] passed element is not scrollable</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#2: add valid address checksum into address book AAddr#2-Ethereum" time="21.789" classname="AAddr#2-Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAddr#3: add same address" timestamp="2019-08-19T09:22:44" tests="7" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="0" time="66.996">
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Aion" time="9.613" classname="AAddr#3-Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: false,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;b356910b-c70b-4145-a569-7888c44f3123&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;b356910b-c70b-4145-a569-7888c44f3123&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     error:
+      { error: &apos;no such element&apos;,
+        message:
+         &apos;An element could not be located on the page using the given search parameters.&apos;,
+        stacktrace:
+         &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;bd4e1a55-933c-4fcf-bdf1-b4b36dd09281&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;bd4e1a55-933c-4fcf-bdf1-b4b36dd09281&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     error:
+      { error: &apos;no such element&apos;,
+        message:
+         &apos;An element could not be located on the page using the given search parameters.&apos;,
+        stacktrace:
+         &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     error:
+      { error: &apos;no such element&apos;,
+        message:
+         &apos;An element could not be located on the page using the given search parameters.&apos;,
+        stacktrace:
+         &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;f924b6d3-b987-49e6-a277-50aae136c098&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;f924b6d3-b987-49e6-a277-50aae136c098&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;c718ca94-6169-415a-a5dc-edb4c72b8826&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c718ca94-6169-415a-a5dc-edb4c72b8826&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;c7a11bae-f31d-4d0c-903a-cff0ac7ec2cc&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c7a11bae-f31d-4d0c-903a-cff0ac7ec2cc&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     en: &apos;Address Book&apos;,
+     cn: &apos;地址簿&apos; },
+  Add_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;0d0375b3-b75b-4997-aa32-e1760274c0db&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;0d0375b3-b75b-4997-aa32-e1760274c0db&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Add_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     en: &apos;Add&apos;,
+     cn: &apos;添加&apos; },
+  Address_List:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;e4170731-d573-40e6-ba89-4e19145f2aa3&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;e4170731-d573-40e6-ba89-4e19145f2aa3&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Ethereum" time="9.508" classname="AAddr#3-Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;d3ee4a41-2e12-4d3e-8913-ffe89fa75ba4&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;d3ee4a41-2e12-4d3e-8913-ffe89fa75ba4&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;496622f1-457c-431a-88e4-813d3e56b9c2&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;496622f1-457c-431a-88e4-813d3e56b9c2&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;22089f39-bcfd-4cef-875b-f1e7fc1b02ba&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;22089f39-bcfd-4cef-875b-f1e7fc1b02ba&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;59d651ed-3e1d-45b6-98a2-923baf8692ba&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;59d651ed-3e1d-45b6-98a2-923baf8692ba&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;c6c6f0e8-fbd2-414e-b0ff-2c24abada548&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c6c6f0e8-fbd2-414e-b0ff-2c24abada548&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;1bc681e1-7715-47b5-8db6-9d0d922ee491&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;1bc681e1-7715-47b5-8db6-9d0d922ee491&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;42f323ce-97a4-4c5c-95ce-bffbf30759f8&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;42f323ce-97a4-4c5c-95ce-bffbf30759f8&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Bitcoin" time="9.561" classname="AAddr#3-Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;55a986e6-eaa5-480e-9a13-13829b606e2a&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;55a986e6-eaa5-480e-9a13-13829b606e2a&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;f7c7f9ba-e230-4b0a-8580-544fbb30f22e&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;f7c7f9ba-e230-4b0a-8580-544fbb30f22e&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;5851b8f9-5f8b-44d5-a161-f824ca2b0332&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;5851b8f9-5f8b-44d5-a161-f824ca2b0332&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;8e39fec6-cc40-471c-b614-eaea48763730&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;8e39fec6-cc40-471c-b614-eaea48763730&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;225d3588-6fe9-45f1-8022-0a137dd353e9&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;225d3588-6fe9-45f1-8022-0a137dd353e9&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;8e56cb89-1553-43e5-927c-b332a4cb5a45&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;8e56cb89-1553-43e5-927c-b332a4cb5a45&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;9556fd82-730b-497f-87bf-4bd342c5f672&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;9556fd82-730b-497f-87bf-4bd342c5f672&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Litecoin" time="9.866" classname="AAddr#3-Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;5a5fc9bd-6a9d-4adc-82ff-53cfa3d59592&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;5a5fc9bd-6a9d-4adc-82ff-53cfa3d59592&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;d51a47f6-7b00-4ad6-a632-208898ae3d08&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;d51a47f6-7b00-4ad6-a632-208898ae3d08&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;7d6ea973-3eae-462d-b48e-f2e87beb644c&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;7d6ea973-3eae-462d-b48e-f2e87beb644c&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;138f6b77-676f-4ccc-8d76-003dda64eac1&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;138f6b77-676f-4ccc-8d76-003dda64eac1&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;49484488-f72e-431c-967b-103624992a4e&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;49484488-f72e-431c-967b-103624992a4e&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;5c4ffb3e-3362-45ec-ae87-573482bf9cf9&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;5c4ffb3e-3362-45ec-ae87-573482bf9cf9&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;b3e0532c-815f-4d58-ab98-60605e7f87e1&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;b3e0532c-815f-4d58-ab98-60605e7f87e1&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Tron" time="9.281" classname="AAddr#3-Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;c3d394fb-7ac5-4471-b44e-1caae5cb0759&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c3d394fb-7ac5-4471-b44e-1caae5cb0759&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;e7ae266f-7d33-4474-9cde-f388cfbb2539&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;e7ae266f-7d33-4474-9cde-f388cfbb2539&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;ac990113-da02-4bed-a373-a812ebf3d128&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;ac990113-da02-4bed-a373-a812ebf3d128&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;bf8204a0-d782-48a6-bc94-da5f33d21d87&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;bf8204a0-d782-48a6-bc94-da5f33d21d87&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;9a6f7e9e-c3a7-4936-ad5e-87f598179995&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;9a6f7e9e-c3a7-4936-ad5e-87f598179995&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;6ff27739-3f87-40ac-97bd-aa56241bbec5&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;6ff27739-3f87-40ac-97bd-aa56241bbec5&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;0c9e5781-6009-49e0-9136-211a7804fa49&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;0c9e5781-6009-49e0-9136-211a7804fa49&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Aion checksum duplication" time="9.376" classname="AAddr#3-Aion checksum duplication">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;e2e0b88e-e380-4c08-b404-42132979db9e&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;e2e0b88e-e380-4c08-b404-42132979db9e&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;7f8fa15c-2539-4bff-8102-10fa84975fe1&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;7f8fa15c-2539-4bff-8102-10fa84975fe1&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;c2f74395-35ed-4040-aba4-7ab7b0537831&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c2f74395-35ed-4040-aba4-7ab7b0537831&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;7800b053-a0e4-4881-b2cc-07dc6788f2f9&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;7800b053-a0e4-4881-b2cc-07dc6788f2f9&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;9ed5802f-cda7-4633-ae12-620ae2a2c790&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;9ed5802f-cda7-4633-ae12-620ae2a2c790&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;10db3c11-75d9-4437-a5d9-e0663f3a34fa&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;10db3c11-75d9-4437-a5d9-e0663f3a34fa&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;4ae6b014-10a5-48d3-b2b5-bf55097e712e&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;4ae6b014-10a5-48d3-b2b5-bf55097e712e&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#3: add same address AAddr#3-Ethereum checksum duplication" time="9.791" classname="AAddr#3-Ethereum checksum duplication">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------make sure landing on add new contact---------------------------
+
+[DEBUG] { isFullyLoaded: true,
+  Caption:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;fe11e895-119a-4c01-a595-e9b847027cc6&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;fe11e895-119a-4c01-a595-e9b847027cc6&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Caption&apos;,
+     en: &apos;Contact&apos;,
+     cn: &apos;联系人&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos; },
+  Coin_Type_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;a4defb11-fde7-4c4f-925b-17660c823f2f&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;a4defb11-fde7-4c4f-925b-17660c823f2f&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[1]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Coin_Type_Select_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;56e5f0e2-463e-484e-834a-1c3f41145ab0&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;56e5f0e2-463e-484e-834a-1c3f41145ab0&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Coin_Type_Select_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;选择币种&apos;,
+     en: &apos;Select Coin&apos; },
+  Contact_Name_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;af5b412b-05f8-4ae2-aee6-5574e8424467&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;af5b412b-05f8-4ae2-aee6-5574e8424467&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Contact_Name_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[2]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Address_TextField:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;f4bb489d-5f7c-4ab6-aba7-d6b598c9038d&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;f4bb489d-5f7c-4ab6-aba7-d6b598c9038d&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_TextField&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[3]&apos;,
+     android_class: &apos;android.widget.EditText&apos; },
+  Save_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;f6ccd80a-cf2e-4c5e-8f34-3e299678d1f2&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;f6ccd80a-cf2e-4c5e-8f34-3e299678d1f2&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Save_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView&apos;,
+     android_class: &apos;android.widget.TextView&apos;,
+     cn: &apos;保存&apos;,
+     en: &apos;Save&apos; },
+  Back_Btn:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;a535ba60-29a5-4785-aaf8-aa9a05b15f6a&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;a535ba60-29a5-4785-aaf8-aa9a05b15f6a&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Back_Btn&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup&apos; } }
+--------------------------------passed---------------------------
+</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAddr#4: remove address" timestamp="2019-08-19T09:25:04" tests="5" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="0" time="32.119">
+    <testcase name="import accouts into address book AAddr#4: remove address AAddr#4-Aion" time="9.556" classname="AAddr#4-Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  elementId: &apos;acd25e2c-386b-4d0d-bfaf-c316790caecd&apos;,
+  &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;acd25e2c-386b-4d0d-bfaf-c316790caecd&apos;,
+  selector: &apos;//*[@text=&quot;Aion_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;1cf95c1f-e845-4dad-b7b5-b6a7ecda53de&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;0bdcfacd-bbcd-403a-b043-37e2b97cc754&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  error:
+   { error: &apos;no such element&apos;,
+     message:
+      &apos;An element could not be located on the page using the given search parameters.&apos;,
+     stacktrace:
+      &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+  selector: &apos;//*[@text=&quot;Aion_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;ec922097-c70f-4be1-a1ba-6b4ac331c9c6&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;277e7063-66cd-4775-a1fd-0e3078f46ac7&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#4: remove address AAddr#4-Ethereum" time="5.701" classname="AAddr#4-Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  elementId: &apos;c7140f96-bd15-42ee-bb90-a7f8110f1d49&apos;,
+  &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;c7140f96-bd15-42ee-bb90-a7f8110f1d49&apos;,
+  selector: &apos;//*[@text=&quot;Ethereum_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;b4b00bd9-a80f-4af5-b773-d77d78e4753e&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;b4b00bd9-a80f-4af5-b773-d77d78e4753e&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  error:
+   { error: &apos;no such element&apos;,
+     message:
+      &apos;An element could not be located on the page using the given search parameters.&apos;,
+     stacktrace:
+      &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+  selector: &apos;//*[@text=&quot;Ethereum_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;d13f6790-e72d-409c-b7fe-43009199067c&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;2cbb7ebf-0a06-4472-b755-7167f8667014&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#4: remove address AAddr#4-Bitcoin" time="5.695" classname="AAddr#4-Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  elementId: &apos;a043e890-12b2-458e-a133-09149d710342&apos;,
+  &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;a043e890-12b2-458e-a133-09149d710342&apos;,
+  selector: &apos;//*[@text=&quot;Bitcoin_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;142a57f1-a7bc-4988-8766-0131b39c8394&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;142a57f1-a7bc-4988-8766-0131b39c8394&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  error:
+   { error: &apos;no such element&apos;,
+     message:
+      &apos;An element could not be located on the page using the given search parameters.&apos;,
+     stacktrace:
+      &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+  selector: &apos;//*[@text=&quot;Bitcoin_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;dd521631-870e-4800-83ba-1f4a56552003&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;b24e1a7c-1cea-4961-afc7-f4927c8c5e90&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#4: remove address AAddr#4-Litecoin" time="5.691" classname="AAddr#4-Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  elementId: &apos;a5f92104-cc94-4b5a-965c-121399507d71&apos;,
+  &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;a5f92104-cc94-4b5a-965c-121399507d71&apos;,
+  selector: &apos;//*[@text=&quot;Litecoin_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;9928f492-5d23-4f00-a970-eaf8953b9db3&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;9928f492-5d23-4f00-a970-eaf8953b9db3&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  error:
+   { error: &apos;no such element&apos;,
+     message:
+      &apos;An element could not be located on the page using the given search parameters.&apos;,
+     stacktrace:
+      &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+  selector: &apos;//*[@text=&quot;Litecoin_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;b6b84ef1-7e09-4877-a181-935e5e7c7860&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;97f7a35d-d8c6-489b-bd22-168748521f21&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#4: remove address AAddr#4-Tron" time="5.476" classname="AAddr#4-Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  elementId: &apos;17e6cae0-b526-4b04-9941-fee4735999f4&apos;,
+  &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;17e6cae0-b526-4b04-9941-fee4735999f4&apos;,
+  selector: &apos;//*[@text=&quot;Tron_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;8f62ac01-bdb4-45a7-a098-fd18df70533b&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;8f62ac01-bdb4-45a7-a098-fd18df70533b&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }
+[DEBUG] passed element is not scrollable
+[DEBUG] Element {
+  sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+  error:
+   { error: &apos;no such element&apos;,
+     message:
+      &apos;An element could not be located on the page using the given search parameters.&apos;,
+     stacktrace:
+      &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; },
+  selector: &apos;//*[@text=&quot;Tron_pk&quot;]/..&apos;,
+  parent:
+   Element {
+     sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+     elementId: &apos;4988fc37-500c-4198-aa7a-8fc2152f17ab&apos;,
+     &apos;element-6066-11e4-a52e-4f735466cecf&apos;: &apos;ecb0b45c-c013-4e04-a302-4e16ac267ae6&apos;,
+     selector:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     parent:
+      Browser {
+        sessionId: &apos;4b4d235a-d6e8-4485-af16-931f7ddcf4af&apos;,
+        capabilities: [Object],
+        addCommand: [Function],
+        overwriteCommand: [Function],
+        _NOT_FIBER: true },
+     emit: [Function: bound ],
+     addCommand: [Function],
+     overwriteCommand: [Function],
+     mapped_name: &apos;Address_List&apos;,
+     android_xPath:
+      &apos;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView&apos;,
+     android_class: &apos;android.widget.ScrollView&apos;,
+     _NOT_FIBER: true },
+  emit: [Function: bound bound ],
+  addCommand: [Function],
+  overwriteCommand: [Function] }</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAddr#6: ETH/AION no prefix is invalid format" timestamp="2019-08-19T09:25:38" tests="4" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="2" time="37.485">
+    <testcase name="import accouts into address book AAddr#6: ETH/AION no prefix is invalid format AAddr#6-Aion fill with noprefix" time="9.294" classname="AAddr#6-Aion fill with noprefix">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#6: make sure makkii land on new Contact section---------------------------
+
+--------------------------------AAddr#6: precondition completed---------------------------
+
+[DEBUG] check if keyboard show up, if so hide it
+[INFO] fill in address with a0e08bf1df768bb3f40e795dd5c487889c17f6c54111f8d9a5553783a1e6c963
+[DEBUG] click save button
+[DEBUG] check error msg
+[DEBUG] Invalid AION address
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#6: ETH/AION no prefix is invalid format AAddr#6-Aion fill with checksumNoPrefix" time="8.664" classname="AAddr#6-Aion fill with checksumNoPrefix">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#6: make sure makkii land on new Contact section---------------------------
+
+--------------------------------AAddr#6: precondition completed---------------------------
+
+[DEBUG] check if keyboard show up, if so hide it
+[INFO] fill in address with A0e08Bf1Df768bB3f40e795dd5c487889c17F6c54111F8D9A5553783a1e6c963
+[DEBUG] click save button
+[DEBUG] check error msg
+[DEBUG] Invalid AION address
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#6: ETH/AION no prefix is invalid format AAddr#6-Ethereum fill with noprefix" time="10.057" classname="AAddr#6-Ethereum fill with noprefix">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#6: make sure makkii land on new Contact section---------------------------
+
+--------------------------------AAddr#6: precondition completed---------------------------
+
+[DEBUG] check if keyboard show up, if so hide it
+[INFO] fill in address with 4be78b8ba92567ab0889be896578be56b816d318
+[DEBUG] click save button
+[DEBUG] check error msg
+[DEBUG] Invalid ETH address</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#6: ETH/AION no prefix is invalid format AAddr#6-Ethereum fill with checksumNoPrefix" time="9.47" classname="AAddr#6-Ethereum fill with checksumNoPrefix">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#6: make sure makkii land on new Contact section---------------------------
+
+--------------------------------AAddr#6: precondition completed---------------------------
+
+[DEBUG] check if keyboard show up, if so hide it
+[INFO] fill in address with 4BE78b8BA92567AB0889BE896578Be56B816D318
+[DEBUG] click save button
+[DEBUG] check error msg
+[DEBUG] Invalid ETH address</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAddr#5: invalid address format" timestamp="2019-08-19T09:26:23" tests="20" file="/home/aion/miao_ws/appium_ws/test_cases/addressBook.test.js" failures="6" time="191.77999999999997">
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Aion fill with Ethereum" time="9.494" classname="AAddr#5-Aion fill with Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Aion fill with Bitcoin" time="9.617" classname="AAddr#5-Aion fill with Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Aion fill with Litecoin" time="9.741" classname="AAddr#5-Aion fill with Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Aion fill with Tron" time="10.013" classname="AAddr#5-Aion fill with Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Ethereum fill with Aion" time="9.607" classname="AAddr#5-Ethereum fill with Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Ethereum fill with Bitcoin" time="9.61" classname="AAddr#5-Ethereum fill with Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Ethereum fill with Litecoin" time="9.643" classname="AAddr#5-Ethereum fill with Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Ethereum fill with Tron" time="9.673" classname="AAddr#5-Ethereum fill with Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Bitcoin fill with Aion" time="9.766" classname="AAddr#5-Bitcoin fill with Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Bitcoin fill with Ethereum" time="9.721" classname="AAddr#5-Bitcoin fill with Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Bitcoin fill with Litecoin" time="9.818" classname="AAddr#5-Bitcoin fill with Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Bitcoin fill with Tron" time="8.776" classname="AAddr#5-Bitcoin fill with Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Litecoin fill with Aion" time="9.304" classname="AAddr#5-Litecoin fill with Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Litecoin fill with Ethereum" time="9.691" classname="AAddr#5-Litecoin fill with Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Litecoin fill with Bitcoin" time="9.968" classname="AAddr#5-Litecoin fill with Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Litecoin fill with Tron" time="9.9" classname="AAddr#5-Litecoin fill with Tron">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Tron fill with Aion" time="8.683" classname="AAddr#5-Tron fill with Aion">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Tron fill with Ethereum" time="9.689" classname="AAddr#5-Tron fill with Ethereum">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg</system-out>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Tron fill with Bitcoin" time="9.732" classname="AAddr#5-Tron fill with Bitcoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+    <testcase name="import accouts into address book AAddr#5: invalid address format AAddr#5-Tron fill with Litecoin" time="9.334" classname="AAddr#5-Tron fill with Litecoin">
+      <system-out>--------------------------------Pre-condition: make sure makkii navigate to address book section---------------------------
+
+--------------------------------Pre-condition: passed---------------------------
+
+--------------------------------AAddr#5-pre: make sure landing on add new contact---------------------------
+
+--------------------------------AAddr#5-pre: passed---------------------------
+
+[DEBUG] click back button
+[DEBUG] check error msg
+[DEBUG] { error: &apos;no such element&apos;,
+  message:
+   &apos;An element could not be located on the page using the given search parameters.&apos;,
+  stacktrace:
+   &apos;NoSuchElementError: An element could not be located on the page using the given search parameters.\n    at AndroidUiautomator2Driver.findElOrEls (/home/aion/.nvm/versions/node/v8.9.1/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n    at &lt;anonymous&gt;&apos; }</system-out>
+      <failure message="An element could not be located on the page using the given search parameters." type=""><![CDATA[An element could not be located on the page using the given search parameters.]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

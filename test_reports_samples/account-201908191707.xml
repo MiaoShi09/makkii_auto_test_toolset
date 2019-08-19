@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="137.72" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-19T09:07:44" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="account related test set" timestamp="2019-08-19T09:07:44" tests="0" file="/home/aion/miao_ws/appium_ws/test_cases/account.test.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="AAccImp#1: add crypto coin from HD" timestamp="2019-08-19T09:08:06" tests="5" file="/home/aion/miao_ws/appium_ws/test_cases/account.test.js" failures="0" time="46.054">
+    <testcase name="account related test set AAccImp#1: add crypto coin from HD AAccImp#1-Aion: add Aion account" time="6.599" classname="AAccImp#1-Aion: add Aion account">
+      <system-out>--------------------------------AAccImp#1-Aion: add Aion account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Aion tab
+[INFO] select create button
+[INFO] created Aion address from HD
+--------------------------------AAccImp#1-Aion: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#1: add crypto coin from HD AAccImp#1-Ethereum: add Ethereum account" time="6.168" classname="AAccImp#1-Ethereum: add Ethereum account">
+      <system-out>--------------------------------AAccImp#1-Ethereum: add Ethereum account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Ethereum tab
+[INFO] select create button
+[INFO] created Ethereum address from HD
+--------------------------------AAccImp#1-Ethereum: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#1: add crypto coin from HD AAccImp#1-BitCoin: add BitCoin account" time="6.419" classname="AAccImp#1-BitCoin: add BitCoin account">
+      <system-out>--------------------------------AAccImp#1-BitCoin: add BitCoin account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Bitcoin tab
+[INFO] select create button
+[INFO] created Bitcoin address from HD
+--------------------------------AAccImp#1-BitCoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#1: add crypto coin from HD AAccImp#1-LiteCoin:add LiteCoin account" time="6.493" classname="AAccImp#1-LiteCoin:add LiteCoin account">
+      <system-out>--------------------------------AAccImp#1-LiteCoin: add LiteCoin account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Litecoin tab
+[INFO] select create button
+[INFO] created Litecoin address from HD
+--------------------------------AAccImp#1-LiteCoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#1: add crypto coin from HD AAccImp#1-Tron:add Tron account" time="20.375" classname="AAccImp#1-Tron:add Tron account">
+      <system-out>--------------------------------AAccImp#1-Tron: add Tron account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Tron tab
+[INFO] select create button
+[INFO] created Tron address from HD
+--------------------------------AAccImp#1-Tron: passed---------------------------
+</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="AAccImp#2: add crypto coin from private key" timestamp="2019-08-19T09:08:52" tests="5" file="/home/aion/miao_ws/appium_ws/test_cases/account.test.js" failures="0" time="91.666">
+    <testcase name="account related test set AAccImp#2: add crypto coin from private key AAccImp#2-Aion: add Aion account" time="12.384" classname="AAccImp#2-Aion: add Aion account">
+      <system-out>--------------------------------AAccImp#2-Aion: add Aion account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Aion tab
+[INFO] select import private key button
+[INFO] import Aion private key: 0x0e7ff5ec5e46ba057e0a9cfcb610a8560260fbfc2db92b08faba826dacac485eb6a639de25c0ca499d4161409b02f3a6e0ed0555bdbd56017f5fc9f3ce34e3d0
+[INFO] created Aion address from private key
+--------------------------------AAccImp#2-Aion: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#2: add crypto coin from private key AAccImp#2-Ethereum: add Ethereum account" time="9.42" classname="AAccImp#2-Ethereum: add Ethereum account">
+      <system-out>--------------------------------AAccImp#2-Ethereum: add Ethereum account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Ethereum tab
+[INFO] select import private key button
+[INFO] import Ethereum private key: AA686463F8673C446ADC65DAF7C2E8997EC403499AA0242479074A72186EAE63
+[INFO] created Ethereum address from private key
+--------------------------------AAccImp#2-Ethereum: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#2: add crypto coin from private key AAccImp#2-BitCoin: add BitCoin account" time="25.657" classname="AAccImp#2-BitCoin: add BitCoin account">
+      <system-out>--------------------------------AAccImp#2-BitCoin: add BitCoin account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Bitcoin tab
+[INFO] select import private key button
+[INFO] import Bitcoin private key: b355a5d352cb05d7314a3ec6bf2b68468e8e93bb2f8825be1f0325a5882ae6e7
+[INFO] created Bitcoin address from private key
+--------------------------------AAccImp#2-BitCoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#2: add crypto coin from private key AAccImp#2-LiteCoin:add LiteCoin account" time="28.696" classname="AAccImp#2-LiteCoin:add LiteCoin account">
+      <system-out>--------------------------------AAccImp#2-LiteCoin:add LiteCoin account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Litecoin tab
+[INFO] select import private key button
+[INFO] import Litecoin private key: cc3c50bc70e0da3b1f685bf52640188d2252316af50c24ec22087ed7f6d41166
+[INFO] created Litecoin address from private key
+--------------------------------AAccImp#2-LiteCoin: passed---------------------------
+</system-out>
+    </testcase>
+    <testcase name="account related test set AAccImp#2: add crypto coin from private key AAccImp#2-Tron:add Tron account" time="15.509" classname="AAccImp#2-Tron:add Tron account">
+      <system-out>--------------------------------AAccImp#2-Tron:add Tron account---------------------------
+
+[INFO] click (+) to add address
+[INFO] select Tron tab
+[INFO] select import private key button
+[INFO] import Tron private key: c7b29d349ae090e4e29a9f1a54ea47d3442a78dcb9893d077cded673390b3055
+[INFO] created Tron address from private key
+--------------------------------AAccImp#2-Tron: passed---------------------------
+</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,5 +1,6 @@
 //import dependancies
 const fs = require("fs");
+const util = require("util");
 //set up constant private value
 const DEFAULT_LOG_FOLDER = "test_logs";
 const LEVEL_VALUE={
@@ -9,6 +10,8 @@ const LEVEL_VALUE={
   debug:2
 }
 var _instance = null;
+
+
 
 class Logger{
   static _currentInstance(){
@@ -25,6 +28,20 @@ class Logger{
     _instance = this;
   }
 
+  updateTest(testObj){
+    this.test = testObj;
+    return this;
+  }
+
+  _logReport(){
+      let formattedMessage = util.format.apply(util, arguments);
+      this.test.consoleOutputs = (this.test.consoleOutputs || []).concat(formattedMessage);
+  }
+
+  _logError(){
+      let formattedMessage = util.format.apply(util, arguments);
+      this.test.consoleErrors = (this.test.consoleErrors || []).concat(formattedMessage);
+  }
   info(info){
     if(this.level >= LEVEL_VALUE.info){
       if(this.enableConsoleLog){
@@ -32,6 +49,8 @@ class Logger{
         console.log(info);
       }
       fs.appendFileSync(this.path,"[INFO] \t"+JSON.stringify(info)+"\n");
+      this._logReport("[INFO]",info);
+
     }
   }
 
@@ -42,6 +61,7 @@ class Logger{
         console.log(debugInfo);
       }
       fs.appendFileSync(this.path,"[DEBUG]\t"+JSON.stringify(debugInfo)+"\n");
+      this._logReport("[DEBUG]",debugInfo);
     }
   }
 
@@ -52,6 +72,7 @@ class Logger{
         console.log(error);
       }
       fs.appendFileSync(this.path,"[ERROR]\t"+JSON.stringify(error)+"\n");
+      this._logError(error);
     }
   }
 
@@ -62,6 +83,7 @@ class Logger{
         console.log(msg);
       }
       fs.appendFileSync(this.path,"---------------------"+msg+"-------------------------------\n");
+      this._logReport("--------------------------------%s---------------------------\n",msg);
     }
   }
 }

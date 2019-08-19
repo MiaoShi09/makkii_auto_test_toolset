@@ -4,10 +4,10 @@
   "description": "makkii wallet test automation toolset",
   "main": "MAK-81.js",
   "scripts": {
-    "testAll": "./node_modules/.bin/mocha test_cases --reporter-options mochaFile=test_reports/fullTest-$(date +%Y%m%d%H%M).xml --no-timeouts",
-    "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --reporter-options mochaFile=test_reports/account-$(date +%Y%m%d%H%M).xml --no-timeouts",
-    "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --reporter-options mochaFile=test_reports/password-$(date +%Y%m%d%H%M).xml --no-timeouts",
-    "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --reporter-options mochaFile=test_reports/addressBook-$(date +%Y%m%d%H%M).xml --no-timeouts",
+    "testAll": "./node_modules/.bin/mocha test_cases --reporter-options mochaFile=test_reports/fullTest-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
+    "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --reporter-options mochaFile=test_reports/account-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
+    "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --reporter-options mochaFile=test_reports/password-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
+    "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --reporter-options mochaFile=test_reports/addressBook-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
     "checkMAK81":"node MAK-81"
   },
   "author": "",

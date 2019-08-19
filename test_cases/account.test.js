@@ -20,10 +20,11 @@ const { permissionHandler, eraseDataHandler }  = require("../libs/test_helper/al
 const { loginFlow, recoveryFlow } = require("../libs/test_helper/commonFlow");
 
 
-describe("account related test set",()=>{
+describe("account related test set",function(){
   var makkii, client;
 
-  before(async ()=>{
+  before(async function(){
+    logger.updateTest(this.test);
     logger.divider("TEST NAME: "+ TEST_NAME);
     logger.divider("TEST INFORMATION ");
     logger.info(" > Operating System: "+ os);
@@ -44,11 +45,14 @@ describe("account related test set",()=>{
     await recoveryFlow(makkii,TEST_DATA.seed_phrase,DEFAULT_PASSWORD,logger);
     // await loginFlow(makkii, DEFAULT_PASSWORD,logger);
     logger.divider("Pre-condition: passed");
-  })
+  });
+  beforeEach(function(){
+    logger.updateTest(this.currentTest);
+  });
+  describe("AAccImp#1: add crypto coin from HD",function(){
 
-  describe("AAccImp#1: add crypto coin from HD",()=>{
 
-    it("AAccImp#1-Aion: add Aion account", async ()=>{
+    it("AAccImp#1-Aion: add Aion account", async function(){
       logger.divider("AAccImp#1-Aion: add Aion account");
       await createCoin(makkii,"Aion");
       await client.pause(PAUSE_TIMEOUT);
@@ -62,7 +66,7 @@ describe("account related test set",()=>{
       });
       logger.divider("AAccImp#1-Aion: passed");
     });
-    it("AAccImp#1-Ethereum: add Ethereum account", async ()=>{
+    it("AAccImp#1-Ethereum: add Ethereum account", async function(){
       logger.divider("AAccImp#1-Ethereum: add Ethereum account");
       await createCoin(makkii,"Ethereum");
       await client.pause(PAUSE_TIMEOUT);
@@ -77,7 +81,7 @@ describe("account related test set",()=>{
       });
       logger.divider("AAccImp#1-Ethereum: passed");
     });
-    it("AAccImp#1-BitCoin: add BitCoin account", async ()=>{
+    it("AAccImp#1-BitCoin: add BitCoin account", async function(){
       logger.divider("AAccImp#1-BitCoin: add BitCoin account");
       await createCoin(makkii,"Bitcoin");
       await client.pause(PAUSE_TIMEOUT);
@@ -91,7 +95,7 @@ describe("account related test set",()=>{
       });
       logger.divider("AAccImp#1-BitCoin: passed");
     });
-    it("AAccImp#1-LiteCoin:add LiteCoin account", async ()=>{
+    it("AAccImp#1-LiteCoin:add LiteCoin account", async function(){
       logger.divider("AAccImp#1-LiteCoin: add LiteCoin account");
       await createCoin(makkii,"Litecoin");
       await client.pause(PAUSE_TIMEOUT);
@@ -105,7 +109,7 @@ describe("account related test set",()=>{
       });
       logger.divider("AAccImp#1-LiteCoin: passed");
     });
-    it("AAccImp#1-Tron:add Tron account", async ()=>{
+    it("AAccImp#1-Tron:add Tron account", async function(){
       logger.divider("AAccImp#1-Tron: add Tron account");
       await createCoin(makkii,"Tron");
       await client.pause(PAUSE_TIMEOUT);
@@ -122,9 +126,9 @@ describe("account related test set",()=>{
     });
   });
 
-  describe("AAccImp#2: add crypto coin from private key",()=>{
+  describe("AAccImp#2: add crypto coin from private key",function(){
 
-    it("AAccImp#2-Aion: add Aion account", async ()=>{
+    it("AAccImp#2-Aion: add Aion account", async function(){
       logger.divider("AAccImp#2-Aion: add Aion account");
       await importPKAcc(makkii,"Aion");
       await client.pause(PAUSE_TIMEOUT);
@@ -138,7 +142,7 @@ describe("account related test set",()=>{
       logger.divider("AAccImp#2-Aion: passed");
     });
 
-    it("AAccImp#2-Ethereum: add Ethereum account", async ()=>{
+    it("AAccImp#2-Ethereum: add Ethereum account", async function(){
       logger.divider("AAccImp#2-Ethereum: add Ethereum account");
       await importPKAcc(makkii,"Ethereum");
       await client.pause(PAUSE_TIMEOUT);
@@ -152,7 +156,7 @@ describe("account related test set",()=>{
       logger.divider("AAccImp#2-Ethereum: passed");
     });
 
-    it("AAccImp#2-BitCoin: add BitCoin account", async ()=>{
+    it("AAccImp#2-BitCoin: add BitCoin account", async function(){
       logger.divider("AAccImp#2-BitCoin: add BitCoin account");
       await importPKAcc(makkii,"Bitcoin");
       await client.pause(PAUSE_TIMEOUT);
@@ -166,7 +170,7 @@ describe("account related test set",()=>{
       logger.divider("AAccImp#2-BitCoin: passed");
     });
 
-    it("AAccImp#2-LiteCoin:add LiteCoin account", async ()=>{
+    it("AAccImp#2-LiteCoin:add LiteCoin account", async function(){
       logger.divider("AAccImp#2-LiteCoin:add LiteCoin account");
       await importPKAcc(makkii,"Litecoin");
       await client.pause(PAUSE_TIMEOUT);
@@ -179,7 +183,7 @@ describe("account related test set",()=>{
       });
       logger.divider("AAccImp#2-LiteCoin: passed")
     });
-    it("AAccImp#2-Tron:add Tron account", async ()=>{
+    it("AAccImp#2-Tron:add Tron account", async function(){
       logger.divider("AAccImp#2-Tron:add Tron account");
       await importPKAcc(makkii,"Tron");
       await client.pause(PAUSE_TIMEOUT);
