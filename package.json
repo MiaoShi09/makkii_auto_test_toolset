@@ -8,7 +8,8 @@
     "accountTest": "./node_modules/.bin/mocha test_cases/account.test.js --reporter-options mochaFile=test_reports/account-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
     "passwordTest": "./node_modules/.bin/mocha test_cases/password.test.js --reporter-options mochaFile=test_reports/password-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
     "addressBookTest": "./node_modules/.bin/mocha test_cases/addressBook.test.js --reporter-options mochaFile=test_reports/addressBook-$(date +%Y%m%d%H%M).xml --no-timeouts --reporter-options outputs=true",
-    "checkMAK81":"node MAK-81"
+    "checkMAK81":"node MAK-81",
+    "getPageSource":"node test_build_tools/getSecuredSourceCode"
   },
   "author": "",
   "license": "ISC",

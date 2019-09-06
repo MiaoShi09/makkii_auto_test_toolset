@@ -34,11 +34,13 @@ class Logger{
   }
 
   _logReport(){
+      if(this.test ==undefined) return;
       let formattedMessage = util.format.apply(util, arguments);
       this.test.consoleOutputs = (this.test.consoleOutputs || []).concat(formattedMessage);
   }
 
   _logError(){
+      if(this.test ==undefined) return;
       let formattedMessage = util.format.apply(util, arguments);
       this.test.consoleErrors = (this.test.consoleErrors || []).concat(formattedMessage);
   }

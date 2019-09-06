@@ -2,9 +2,9 @@
   {
     "mapped_name":"Account_Name_TextField",
     "android_class":"android.widget.EditText",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText"
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault_set_account_name\"]/android.view.ViewGroup/android.widget.EditText"
   },{
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault_set_account_name\"]/preceding-sibling::android.view.ViewGroup/android.view.ViewGroup[3]//android.widget.TextView",
     "mapped_name":"Save_Btn",
     "android_class":"android.widget.TextView"
   }

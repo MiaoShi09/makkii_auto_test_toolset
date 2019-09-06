@@ -8,20 +8,20 @@
   },
   {
     "mapped_name":"Mnemonic_Sec",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"unsigned_register_mnemonic\"]/android.view.ViewGroup[1]",
 
     "comment":"it should contain 12 ViewGroup sections, and each section contains a TextView that contains the seed phrase"
   },
   {
     "mapped_name":"Backup_Btn",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView[1]",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"unsigned_register_mnemonic\"]/android.view.ViewGroup[2]/android.widget.TextView[1]",
     "android_class":"android.widget.TextView",
     "cn":"马上备份",
     "en":"Backup Now"
   },
   {
     "mapped_name":"Skip_Btn",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView[1]",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"unsigned_register_mnemonic\"]/preceding-sibling::android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView[1]",
     "cn":"稍后",
     "en":"Skip"
   }

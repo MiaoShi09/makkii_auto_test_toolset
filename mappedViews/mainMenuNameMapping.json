@@ -1,22 +1,22 @@
 [
   {
     "mapped_name":"Wallet_Btn",
-    "android_xPath":"//android.widget.Button[@content-desc=\"signed_vault, tab, 1 of 4\"]",
+    "android_xPath":"//android.widget.Button[contains(@content-desc,\"signed_vault, tab, \")]",
     "cn":"钱包"
   },
   {
-    "mapped_name":"Dapp_Btn",
-    "android_xPath":"//android.widget.Button[@content-desc=\"signed_dapps, tab, 2 of 4\"]",
-    "cn":"应用"
+    "mapped_name":"News_Btn",
+    "android_xPath":"//android.widget.Button[contains(@content-desc,\"signed_news, tab, \")]",
+    "cn":"新闻"
   },
   {
     "mapped_name":"Dex_Btn",
-    "android_xPath":"//android.widget.Button[@content-desc=\"signed_dex, tab, 3 of 4\"]",
+    "android_xPath":"//android.widget.Button[contains(@content-desc,\"signed_dex, tab, \")]",
     "cn":"市场"
   },
   {
     "mapped_name":"Settings_Btn",
-    "android_xPath":"//android.widget.Button[@content-desc=\"signed_setting, tab, 4 of 4\"]",
+    "android_xPath":"//android.widget.Button[contains(@content-desc,\"signed_setting, tab, \")]",
     "cn":"设置"
   }
 ]

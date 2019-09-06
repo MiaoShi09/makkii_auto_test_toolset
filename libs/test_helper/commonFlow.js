@@ -6,9 +6,10 @@ function loginFlow(app,password,logger){
   return app.loadPage("logInPage")
   .then((loginPage)=>{
     logger.debug("fall in login flow 1")
-    return loginPage.Password_TextField.isExisting(DEFAULT_TIMEOUT);
+    return loginPage.Recovery_Btn.isExisting(DEFAULT_TIMEOUT);
 
   }).then((res)=>{
+    logger.debug(res);
     if(res) return app.views.logInPage.Password_TextField.setValue(password);
     return Promise.reject("Not in login page, skip login flow.");
   }).then(()=>{
@@ -27,7 +28,7 @@ function logoutFlow(app,logger){
     logger.debug("fall in tracking main memu ");
     logger.debug(mainMenu);
     logger.debug("checking mainMemu.Settings_Btn.isExisting()");
-    
+
     return mainMenu.Settings_Btn.isExisting();
   }).then((isExist)=>{
     logger.debug("main memu exists: "+isExist);
@@ -64,6 +65,7 @@ async function logoutPopup_handler(app,approved,logger){
 async function recoveryFlow(app,seed_phrase,password,logger){
   logger.debug("fall in recovery flow");
   await app.loadPage("logInPage").then((loginPage)=>{
+
     if(loginPage.isFullyLoaded){
       return Promise.resolve(loginPage);
     }else{
@@ -71,8 +73,17 @@ async function recoveryFlow(app,seed_phrase,password,logger){
     }
   });
   await app.views.logInPage.Recovery_Btn.click();
-  await app.loadPage("recoveryPage");
+  await app.app.pause(DEFAULT_TIMEOUT);
+  await app.loadPage("recoveryPage").then((recoveryPage)=>{logger.debug(recoveryPage)});
+  //await app.views.recoveryPage.Mnemonic_TextFiled.click();
+  await app.app.pause(DEFAULT_TIMEOUT*10);
+  logger.debug(seed_phrase);
   await app.views.recoveryPage.Mnemonic_TextFiled.setValue(seed_phrase);
+
+  await app.app.pause(DEFAULT_TIMEOUT*10);
+  await app.views.recoveryPage.Mnemonic_TextFiled.getText().then((content)=>{
+    logger.debug("Mnemonic_TextFiled: "+ content);
+  })
   await app.views.recoveryPage.Confirm_Btn.click();
   await app.loadPage("recoveryPasswordPage");
 

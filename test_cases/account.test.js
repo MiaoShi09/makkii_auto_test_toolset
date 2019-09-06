@@ -9,7 +9,7 @@ const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="account_test";
 const DEFAULT_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
-const LOG_LEVEL = "info";
+const LOG_LEVEL = "debug";
 
 
 // internal libs

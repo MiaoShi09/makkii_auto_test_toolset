@@ -9,7 +9,7 @@ const TEST_DATA = require("../test_data/qa_data.json");
 const TEST_NAME="password_test";
 const FINAL_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
-const LOG_LEVEL = 'info';
+const LOG_LEVEL = 'debug';
 
 // internal libs
 const logger = new (require("../libs/logger.js"))(TEST_NAME,true,LOG_LEVEL);
@@ -168,7 +168,7 @@ describe("password format test suite", function(){
 
 
     it("APR#4:registration passwords unmatch",async function(){
-      logger.divider("APR#3:registration passwords unmatch");
+      logger.divider("APR#4:registration passwords unmatch");
       let _password1 = utils.generateValidPassword();
       let _password2 = utils.generateValidPassword();
 
@@ -199,7 +199,7 @@ describe("password format test suite", function(){
 
 
     it("APR#5:registration password success",async function(){
-      logger.divider("APR#4:registration password success");
+      logger.divider("APR#5:registration password success");
       let _password1 = utils.generateValidPassword();
 
 
@@ -226,6 +226,7 @@ describe("password format test suite", function(){
         logger.info("skip backup Mnemonic");
         return permissionHandler(makkii,true,logger);
       }).then(()=>{
+        logger.debug("try to load wallet page");
         return makkii.loadPage("walletPage");
       }).catch((e)=>{
         logger.error(e);
@@ -242,7 +243,7 @@ describe("password format test suite", function(){
   describe("password on recovery", function (){
     before(async ()=>{
       logger.divider("password on recovery/pre-condition: expected loading on recoveryPasswordPage");
-      await logoutFlow(makkii, logger);
+      await logoutFlow(makkii, logger).catch((e)=>{logger.error(e);throw e;});
       logger.info("expected landing on logInPage");
       await makkii.loadPage("logInPage");
       logger.info("click recovery botton");
@@ -410,6 +411,7 @@ describe("password format test suite", function(){
     before(async function(){
       logger.divider("pre-condition: log in account and navigate to Settings section.");
       oldPassword = oldPassword || FINAL_PASSWORD;
+      logger.info("oldPassword is "+oldPassword);
       await makkii.isLoaded("Login_Btn").then(()=>{
         return loginFlow(makkii,oldPassword,logger);
       },()=>{
@@ -604,6 +606,7 @@ describe("password format test suite", function(){
       await client.pause(PAUSE_TIMEOUT*2);
       await logoutFlow(makkii,logger);
       // use new password to login makkii to make sure the new password has been updated
+      await client.pause(PAUSE_TIMEOUT*2);
       await loginFlow(makkii, _newPassword, logger);
       await client.pause(PAUSE_TIMEOUT*2);
       assert.equal((await makkii.loadPage("mainMenu")).isFullyLoaded,true);

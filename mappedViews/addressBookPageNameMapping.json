@@ -1,19 +1,19 @@
 [
   {
     "mapped_name": "Caption",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_setting_address_book\"]/preceding-sibling::android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView",
     "android_class":"android.widget.TextView",
     "en":"Address Book",
     "cn":"地址簿"
   },{
     "mapped_name": "Add_Btn",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_setting_address_book\"]/preceding-sibling::android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView",
     "android_class":"android.widget.TextView",
     "en":"Add",
     "cn":"添加"
   },{
     "mapped_name":"Address_List",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_setting_address_book\"]/android.widget.ScrollView",
     "android_class":"android.widget.ScrollView"
   }
 ]

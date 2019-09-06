@@ -2,26 +2,26 @@
   {
     "mapped_name":"Aion_Btn",
     "en":"AION/AION",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]"
+    "android_xPath":"//android.widget.TextView[@text=\"AION/AION\"]/.."
   },{
     "mapped_name":"Bitcoin_Btn",
     "en":"BITCOIN/BTC",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]"
+    "android_xPath":"//android.widget.TextView[@text=\"BITCOIN/BTC\"]/.."
   },{
     "mapped_name":"Ethereum_Btn",
     "en":"ETHEREUM/ETH",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]"
+    "android_xPath":"//android.widget.TextView[@text=\"ETHEREUM/ETH\"]/.."
   },{
     "mapped_name":"Litecoin_Btn",
     "en":"LITECOIN/LTC",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[1]"
+    "android_xPath":"//android.widget.TextView[@text=\"LITECOIN/LTC\"]/.."
   },{
     "mapped_name":"Tron_Btn",
     "en":"TRON/TRX",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup[1]"
+    "android_xPath":"//android.widget.TextView[@text=\"TRON/TRX\"]/.."
   },
   {
     "mapped_name":"Back_Btn",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ImageView"
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault_select_coin\"]/preceding-sibling::android.view.ViewGroup/android.view.ViewGroup[1]//android.widget.ImageView"
   }
 ]

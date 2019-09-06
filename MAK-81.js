@@ -1,5 +1,5 @@
 const { remote } = require('webdriverio');
-var { generateValidPassword,haveSameWords } = require("./libs/utils.js");
+
 const ViewElements = require("./libs/ViewElements");
 const { eraseDataHandler, permissionHandler } = require("./libs/test_helper/alterFlowHandlers");
 const { logoutFlow } = require("./libs/test_helper/commonFlow");
@@ -12,12 +12,12 @@ var times = 1;
 const desired_capabilities = (require("./configs/testCapabilies.json")).qa[1];
 const opts = {
   port:4723,
-  logLevel:'info',
+  logLevel:'silent',
   capabilities:desired_capabilities
 }
 
 var logger = new (require("./libs/logger"))(SCRIPT_NAME,true);
-
+var { generateValidPassword,haveSameWords } = require("./libs/utils.js");
 
 var registration = async (i)=>{
   await makkii.isLoaded("Login_Btn");

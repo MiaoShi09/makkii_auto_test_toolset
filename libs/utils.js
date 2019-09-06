@@ -90,7 +90,8 @@ async function haveSameWords(seedPhraseNodes){
     wordSet.add(word);
     wordArray[i] = word;
   }
-  logger.log(wordArray);
+  logger.info(wordArray);
+  logger.info(wordSet.size);
   return Promise.resolve(wordSet.size < 12);
 }
 

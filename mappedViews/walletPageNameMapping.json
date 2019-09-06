@@ -2,15 +2,15 @@
   {
     "mapped_name":"Total_Cap",
     "android_class":"android.widget.TextView",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[1]",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault\"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]",
     "en":"Total"
   },{
     "mapped_name":"Add_Account_Btn",
     "android_class":"android.widget.ImageView",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView"
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView"
   },{
     "mapped_name":"Acc_ListView",
-    "android_xPath":"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView",
+    "android_xPath":"//android.view.ViewGroup[@content-desc=\"signed_vault\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[last()]/android.widget.ScrollView",
     "android_class":"android.widget.ScrollView"
   }
 ]

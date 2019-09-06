@@ -15,10 +15,10 @@ const os = "android";
 
 
   const client = await remote(opts);
-  console.log("please navigate to desired page in 100 seconds");
-  await client.pause(30000);
-  console.log("only 40 secondes left");
-  await client.pause(10000);
+  console.log("please navigate to desired page in 20 seconds");
+  await client.pause(20000);
+  console.log("only 5 secondes left");
+  await client.pause(5000);
   await client.getPageSource();
 
 })()
