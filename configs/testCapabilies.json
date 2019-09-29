@@ -28,6 +28,15 @@
       "clearSystemFiles": false,
       "xcodeOrg":"xxx",
       "xcodeSigningId":"iPhone Developer"
+    },{
+      "platformName": "Android",
+      "platformVersion": "8.0.0",
+      "deviceName": "8FS5T16603004905",
+      "appPackage": "com.chaion.makkii.staging",
+      "clearSystemFiles": false,
+      "appActivity": "com.chaion.makkii.MainActivity",
+      "noReset": true,
+      "automationName": "UiAutomator2"
     }
   ]
 }

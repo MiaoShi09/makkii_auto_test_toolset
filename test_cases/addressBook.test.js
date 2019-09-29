@@ -4,8 +4,8 @@ const assert = require("assert");
 
 // configurations and data
 const { os, language, port } = require("../configs/os_lang.json");
-const desired_capabilities = (require("../configs/testCapabilies.json")).qa[1];
-const TEST_DATA = require("../test_data/qa_data.json");
+const desired_capabilities = (require("../configs/testCapabilies.json")).qa[3];
+const TEST_DATA = require("../test_data/staging_data.json");
 const TEST_NAME="address_book_test";
 const DEFAULT_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC
@@ -335,7 +335,7 @@ describe("import accouts into address book",function(){
     }
   });
 
-  xdescribe("AAddr#6: ETH/AION no prefix is invalid format",function(){
+  describe("AAddr#6: ETH/AION no prefix is invalid format",function(){
 
     var testdata = {};
     testdata.Aion={};
@@ -364,6 +364,14 @@ describe("import accouts into address book",function(){
              throw new Error("unexpected location");
            });
          }
+       }).catch((e)=>{
+         return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+           logger.debug(addressBookPage);
+           if(!addressBookPage.Add_Btn.hasOwnProperty("error"))
+              return addressBookPage.Add_Btn.click();
+           logger.debug("xunexpected location");
+           throw new Error("unexpected location");
+         });
        });
        logger.divider("AAddr#6: precondition completed")
 
@@ -412,11 +420,12 @@ describe("import accouts into address book",function(){
 
   });
 
-  xdescribe("AAddr#5: invalid address format",function(){
+  describe("AAddr#5: invalid address format",function(){
     // add same address for each coin coinType
     beforeEach(async function(){
       logger.updateTest(this.currentTest);
       logger.divider("AAddr#5-pre: make sure landing on add new contact");
+      await makkii.app.pause(PAUSE_TIMEOUT);
       await makkii.loadPage("newContactPage").then((newContactPage)=>{
 
        return makkii.views.newContactPage.Caption.getText();
@@ -430,6 +439,14 @@ describe("import accouts into address book",function(){
              throw new Error("unexpected location");
            });
          }
+       }).catch((e)=>{
+         return makkii.loadPage("addressBookPage").then((addressBookPage)=>{
+           logger.debug(addressBookPage);
+           if(!addressBookPage.Add_Btn.hasOwnProperty("error"))
+              return addressBookPage.Add_Btn.click();
+           logger.debug("xunexpected location");
+           throw new Error("unexpected location");
+         });
        });
         logger.divider("AAddr#5-pre: passed");
     });

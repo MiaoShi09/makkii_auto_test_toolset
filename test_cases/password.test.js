@@ -4,8 +4,8 @@ const assert = require("assert");
 
 // configurations and data
 const { os, language, port } = require("../configs/os_lang.json");
-const desired_capabilities = (require("../configs/testCapabilies.json")).qa[1];
-const TEST_DATA = require("../test_data/qa_data.json");
+const desired_capabilities = (require("../configs/testCapabilies.json")).qa[3];
+const TEST_DATA = require("../test_data/staging_data.json");
 const TEST_NAME="password_test";
 const FINAL_PASSWORD = "12345678";
 const PAUSE_TIMEOUT=1000; // 1 SEC

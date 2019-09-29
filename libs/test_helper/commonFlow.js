@@ -76,11 +76,11 @@ async function recoveryFlow(app,seed_phrase,password,logger){
   await app.app.pause(DEFAULT_TIMEOUT);
   await app.loadPage("recoveryPage").then((recoveryPage)=>{logger.debug(recoveryPage)});
   //await app.views.recoveryPage.Mnemonic_TextFiled.click();
-  await app.app.pause(DEFAULT_TIMEOUT*10);
+  await app.app.pause(DEFAULT_TIMEOUT);
   logger.debug(seed_phrase);
   await app.views.recoveryPage.Mnemonic_TextFiled.setValue(seed_phrase);
 
-  await app.app.pause(DEFAULT_TIMEOUT*10);
+  await app.app.pause(DEFAULT_TIMEOUT);
   await app.views.recoveryPage.Mnemonic_TextFiled.getText().then((content)=>{
     logger.debug("Mnemonic_TextFiled: "+ content);
   })
